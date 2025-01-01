@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seat Selection</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container mt-5">
+        <button class="btn btn-secondary back-button" onclick="goBack()">Back</button>
+        <h2>Seat Selection</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div id="seat-map">
+                    <div class="seat-row">
+                        <div class="seat unavailable" data-seat="Driver">Driver</div>
+                        <div class="seat unavailable" data-seat="ICE">ICE</div>
+                        <div class="seat" data-seat="1">1</div>
+                        <div class="empty"></div>
+                        <div class="empty"></div>
+                    </div>
+                    <div class="seat-row">
+                        <div class="seat" data-seat="2">2</div>
+                        <div class="seat" data-seat="3">3</div>
+                        <div class="empty"></div>
+                        <div class="empty"></div>
+                        <div class="empty"></div>
+                    </div>
+                    <div class="seat-row">
+                        <div class="seat" data-seat="4">4</div>
+                        <div class="seat" data-seat="5">5</div>
+                        <div class="empty"></div>
+                        <div class="seat" data-seat="6">6</div>
+                        <div class="seat" data-seat="7">7</div>
+                    </div>
+                    <div class="seat-row">
+                        <div class="seat" data-seat="8">8</div>
+                        <div class="seat" data-seat="9">9</div>
+                        <div class="empty"></div>
+                        <div class="seat" data-seat="10">10</div>
+                        <div class="seat" data-seat="11">11</div>
+                    </div>
+                    <div class="seat-row">
+                        <div class="seat" data-seat="12">12</div>
+                        <div class="seat" data-seat="13">13</div>
+                        <div class="empty"></div>
+                        <div class="seat" data-seat="14">14</div>
+                        <div class="seat" data-seat="15">15</div>
+                    </div>
+                    <div class="seat-row">
+                        <div class="seat" data-seat="16">16</div>
+                        <div class="seat" data-seat="17">17</div>
+                        <div class="empty"></div>
+                        <div class="seat" data-seat="18">18</div>
+                        <div class="seat" data-seat="19">19</div>
+                    </div>
+                    <div class="seat-row">
+                        <div class="seat" data-seat="20">20</div>
+                        <div class="seat" data-seat="21">21</div>
+                        <div class="empty"></div>
+                        <div class="seat" data-seat="22">22</div>
+                        <div class="seat" data-seat="23">23</div>
+                    </div>
+                    <div class="seat-row">
+                        <div class="seat" data-seat="24">24</div>
+                        <div class="seat" data-seat="25">25</div>
+                        <div class="empty"></div>
+                        <div class="seat" data-seat="26">26</div>
+                        <div class="seat" data-seat="27">27</div>
+                    </div>
+                    <div class="seat-row">
+                        <div class="seat" data-seat="28">28</div>
+                        <div class="seat" data-seat="29">29</div>
+                        <div class="empty"></div>
+                        <div class="seat" data-seat="30">30</div>
+                        <div class="seat" data-seat="31">31</div>
+                    </div>
+                    <div class="seat-row">
+                        <div class="seat" data-seat="32">32</div>
+                        <div class="seat" data-seat="33">33</div>
+                        <div class="empty"></div>
+                        <div class="seat" data-seat="34">34</div>
+                        <div class="seat" data-seat="35">35</div>
+                    </div>
+                    <div class="seat-row">
+                        <div class="seat" data-seat="36">36</div>
+                        <div class="seat" data-seat="37">37</div>
+                        <div class="seat unavailable" data-seat="38">38</div>
+                        <div class="seat" data-seat="39">39</div>
+                        <div class="seat" data-seat="40">40</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <table id="selected-seats-table" class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Seat Number</th>
+                            <th>Price</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Selected seats will be added here -->
+                    </tbody>
+                </table>
+                <p>Subtotal: <span id="ticket-subtotal">Ksh 0.00</span></p>
+                <div id="passenger-info" class="mt-3">
+                    <!-- Passenger information will be populated here -->
+                </div>
+                <button class="btn btn-primary btn-block mt-3" onclick="bookSeats()">Book Now</button>
+            </div>
+        </div>
+    </div>
+    <script src="seatSelection.js"></script>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
