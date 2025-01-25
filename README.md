@@ -92,6 +92,19 @@ API Endpoints
     POST /api/reserve-seat: Make a reservation.
     POST /api/cancel-reservation: Cancel a reservation.
 
+### Version 1.0
+- Initial version of the Bus Reservation App.
+
+### Version 1.1 (Upcoming)
+
+#### Planned Features:
+- Add user authentication for enhanced security.
+- Introduce a payment integration feature (e.g., M-Pesa or PayPal).
+- Transition from using JSON files to a database for data storage and management.
+
+#### Bug Fixes:
+- Address the issue where seat bookings are not refreshed/cleared for the next day, causing booked seats to remain unavailable after the journey is completed.
+
 Contributing
 
 Contributions are welcome! Please follow these steps:
