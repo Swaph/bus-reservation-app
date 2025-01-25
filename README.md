@@ -16,31 +16,6 @@ The Bus Reservation App is a web application that allows users to reserve bus se
 - Backend implemented using Node.js and Express.
 - Real-time updates and interactive user interface.
 
-## Project Structure
-
-bus-reservation-app/
-│
-├── backend/
-│   ├── data/
-│   │   └── busData.json
-│   │   └── reservations.json
-│   ├── routes/
-│   │   └── busRoutes.js
-│   ├── app.js
-│   └── package.json
-│
-├── frontend/
-│   ├── css/
-│   │   └── styles.css
-│   ├── js/
-│   │   └── script.js
-│   ├── index.html
-│   ├── searchResults.html
-│   ├── seatSelection.html
-│   └── reservationSummary.html
-│
-└── README.md
-
 ## Getting Started
 
 ### Prerequisites
