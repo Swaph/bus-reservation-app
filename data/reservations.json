@@ -1,0 +1,134 @@
+[
+  {
+    "route": "Nairobi-Mombasa",
+    "date": "2024-11-26",
+    "seats": [],
+    "passengerInfo": {}
+  },
+  {
+    "route": "Nairobi-Mombasa",
+    "date": "2024-11-26",
+    "seats": [
+      "35"
+    ],
+    "passengerInfo": {
+      "35": {
+        "firstName": "riwuer",
+        "lastName": "irewir",
+        "nationalID": "35151678",
+        "phone": "+254721287977"
+      }
+    }
+  },
+  {
+    "route": "Nairobi-Mombasa",
+    "date": "2024-11-26",
+    "seats": [
+      "27"
+    ],
+    "passengerInfo": {
+      "27": {
+        "firstName": "Swafiyah",
+        "lastName": "Gichuki",
+        "nationalID": "37131775",
+        "phone": "+254798329439"
+      }
+    }
+  },
+  {
+    "route": "Nairobi-Mombasa",
+    "date": "2024-11-26",
+    "seats": [
+      "40"
+    ],
+    "passengerInfo": {
+      "40": {
+        "firstName": "Patrick",
+        "lastName": "Gichuki",
+        "nationalID": "31111111",
+        "phone": "+254727965122"
+      }
+    }
+  },
+  {
+    "route": "Nairobi-Kisumu",
+    "date": "2024-11-26",
+    "seats": [
+      "31"
+    ],
+    "passengerInfo": {
+      "31": {
+        "firstName": "Test",
+        "lastName": "Test",
+        "nationalID": "23467980",
+        "phone": "+254676391736"
+      }
+    }
+  },
+  {
+    "route": "Nairobi-Mombasa",
+    "date": "2024-11-26",
+    "seats": [
+      "23"
+    ],
+    "passengerInfo": {
+      "23": {
+        "firstName": "Test",
+        "lastName": "Test",
+        "nationalID": "12345678",
+        "phone": "+254798329347"
+      }
+    }
+  },
+  {
+    "route": "Nairobi-Mombasa",
+    "date": "2024-11-26",
+    "seats": [
+      "7"
+    ],
+    "passengerInfo": {
+      "7": {
+        "firstName": "Final",
+        "lastName": "Test",
+        "nationalID": "12346588",
+        "phone": "+254679729026"
+      }
+    }
+  },
+  {
+    "route": "Nairobi-Mombasa",
+    "date": "2024-11-26",
+    "seats": [
+      "6"
+    ],
+    "passengerInfo": {
+      "6": {
+        "firstName": "Chrome",
+        "lastName": "Test",
+        "nationalID": "45678923",
+        "phone": "+254123487690"
+      }
+    }
+  },
+  {
+    "route": "Nairobi-Mombasa",
+    "date": "2024-11-27",
+    "seats": [],
+    "passengerInfo": {}
+  },
+  {
+    "route": "Nairobi-Mombasa",
+    "date": "2024-11-28",
+    "seats": [
+      "15"
+    ],
+    "passengerInfo": {
+      "15": {
+        "firstName": "Test",
+        "lastName": "Test",
+        "nationalID": "67236732",
+        "phone": "+254798327621"
+      }
+    }
+  }
+]

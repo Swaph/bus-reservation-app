@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Search Results</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container mt-5">
+        <button class="btn btn-secondary back-button" onclick="goBack()">Back</button>
+        <h2>Search Results</h2>
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Bus Image</th>
+                    <th>Bus Name</th>
+                    <th>Route</th>
+                    <th>Departure Time</th>
+                    <th>Arrival Time</th>
+                    <th>Bus Type</th>
+                    <th>Seats Available</th>
+                    <th>Fare/Seat</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="bus-results">
+                <!-- Bus results will be populated here -->
+            </tbody>
+        </table>
+    </div>
+    <script src="searchResults.js"></script>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
