@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In - Bus Reservation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            background-color: #fef6f9; /* Soft pinkish background */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+        .login-container {
+            max-width: 450px; /* Slim and focused */
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+        .card-header {
+            background-color: #d63f73; /* Pink theme for header */
+            color: #fff;
+            border-radius: 10px 10px 0 0;
+            padding: 15px;
+            text-align: center;
+        }
+        .btn-login {
+            background-color: #d63f73; /* Pink button */
+            border: none;
+            padding: 10px;
+            font-weight: 500;
+            transition: background-color 0.3s ease; /* Smooth hover */
+        }
+        .btn-login:hover {
+            background-color: #b93363; /* Darker pink for hover */
+            border-color: #b93363;
+        }
+        .form-control {
+            border-radius: 5px;
+            height: 45px; /* Taller inputs for usability */
+        }
+        .text-muted a {
+            color: #d63f73; /* Pink links */
+            text-decoration: none;
+        }
+        .text-muted a:hover {
+            color: #b93363; /* Darker pink on hover */
+            text-decoration: underline;
+        }
+        .text-login {
+            color: #fff; /* White text for button */
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container mt-5">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="mb-0">Log In to Bus Reservation</h4>
+            </div>
+            <div class="card-body p-4">
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+                    </div>
+                    <button type="submit" class="btn btn-login btn-block text-login">Log In</button>
+                </form>
+                <p class="text-center text-muted mt-3">
+                    Don’t have an account? <a href="#">Sign up</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Placeholder for login logic
+            alert('Login successful! (This is a demo)');
+            // Add real login logic here
+        });
+    </script>
+</body>
+</html>
