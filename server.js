@@ -99,7 +99,7 @@ app.post('/api/login', (req, res) => {
             return res.status(400).json({ error: "Invalid email or password." });
         }
 
-        // ✅ Store user in session
+        // ✅ Store user in session - save user session
         req.session.user = {
             id: user.id,
             email: user.email,
