@@ -1,0 +1,348 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 800px;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-weight: bold;
+}
+
+.lead {
+    font-weight: 300;
+}
+
+.form-control {
+    border-radius: 0;
+}
+
+.btn-primary {
+    background-color: #e75186;
+    border-color: #e75186;
+}
+
+.btn-primary:hover {
+    background-color: #d63f73;
+    border-color: #d63f73;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    width: 100%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Bus Results */
+.bus-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bus-card img {
+    width: 100px;
+    height: auto;
+}
+
+.bus-info {
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.bus-info h3 {
+    margin: 0;
+}
+
+.bus-info p {
+    margin: 5px 0;
+}
+
+.bus-info button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.bus-info button:hover {
+    background-color: #ff4f41;
+}
+
+.table th, .table td {
+    vertical-align: middle;
+}
+
+.table img {
+    max-width: 100px;
+    height: auto;
+}
+
+.btn-primary, .back-button {
+    background-color: #e75186;
+    border-color: #e75186;
+}
+
+.btn-primary:hover, .back-button {
+    background-color: #d63f73;
+    border-color: #d63f73;
+}
+
+.back-button {
+    margin-bottom: 20px;
+}
+
+/* Date picker */
+.date-picker {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+.date-picker:focus {
+    border-color: #e75186;
+    outline: none;
+}
+
+.date-picker::-webkit-calendar-picker-indicator {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    background: url('images/calendar-icon.png') no-repeat center center;
+    background-size: contain;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.date-picker::-webkit-calendar-picker-indicator:hover {
+    opacity: 1;
+}
+
+.date-picker::-webkit-calendar-picker-indicator {
+    background: url('../images/calendar.ico') no-repeat center center;
+    background-size: contain;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.date-picker::-webkit-calendar-picker-indicator:hover {
+    opacity: 1;
+}
+
+/* Seat selection UI */
+.seat {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    background-color: rgb(252, 252, 252);
+    color: black;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    border: 2px solid grey;
+}
+
+/* Staff seats */
+.seat.unavailable {
+    background-color:rgb(250, 232, 235);
+    cursor: not-allowed;
+}
+
+.seat:hover {
+    background-color: lightpink;
+}
+
+/* Booked Seats by other passengers */
+.seat.booked {
+    background-color: rgb(245, 135, 153);
+    cursor: not-allowed;
+}
+
+.seat.selected {
+    background-color: rgb(240, 109, 131);
+}
+
+.seat-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.empty {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+}
+
+.seat-type-dropdown {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    display: none;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    font-size: 14px;
+}
+
+.seat-type-dropdown:focus {
+    outline: none;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+}
+
+/* Reservation summary */
+.summary-section {
+    margin-bottom: 20px;
+}
+
+.ticket-info {
+    margin-bottom: 20px;
+}
+
+.remarks {
+    font-style: italic;
+    color: #555;
+}
+
+.table th, .table td {
+    vertical-align: middle;
+}
+
+.table img {
+    max-width: 100px;
+    height: auto;
+}
+
+.btn-primary, .back-button {
+    background-color: #e75186;
+    border-color: #e75186;
+}
+
+.btn-primary:hover, .back-button:hover {
+    background-color: #d63f73;
+    border-color: #d63f73;
+}
+
+.back-button {
+    margin-bottom: 20px;
+}
+
+.receipt-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    margin: auto;
+}
+
+.receipt-header {
+    text-align: center;
+    background-color: #3498db;
+    color: white;
+    padding: 15px;
+    border-radius: 10px 10px 0 0;
+}
+
+.receipt-section {
+    padding: 15px;
+    text-align: left;
+}
+
+.receipt-section h4 {
+    color: #333;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+}
+
+table {
+    width: 100%;
+    margin-top: 10px;
+}
+
+th {
+    background-color: #3498db;
+    color: white;
+}
+
+td {
+    text-align: left;
+    padding: 8px;
+}
+
+tfoot td {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+.receipt-footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.receipt-footer p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+button {
+    background: #2ecc71;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+button:hover {
+    background: #27ae60;
+}
+
+button:last-child {
+    background: #e74c3c;
+}
+
+button:last-child:hover {
+    background: #c0392b;
+}
