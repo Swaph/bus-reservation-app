@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "origin": "Nairobi",
+    "destination": "Mombasa"
+  },
+  {
+    "id": 2,
+    "origin": "Mombasa",
+    "destination": "Nairobi"
+  },
+  {
+    "id": 3,
+    "origin": "Nairobi",
+    "destination": "Kisumu"
+  },
+  {
+    "id": 4,
+    "origin": "Kisumu",
+    "destination": "Nairobi"
+  },
+  {
+    "id": 5,
+    "origin": "Nairobi",
+    "destination": "Kakamega"
+  },
+  {
+    "id": 6,
+    "origin": "Kakamega",
+    "destination": "Nairobi"
+  },
+  {
+    "id": 7,
+    "origin": "Nairobi",
+    "destination": "Garissa"
+  },
+  {
+    "id": 8,
+    "origin": "Garissa",
+    "destination": "Nairobi"
+  },
+  {
+    "id": 9,
+    "origin": "Nairobi",
+    "destination": "Wajir"
+  },
+  {
+    "id": 10,
+    "origin": "Wajir",
+    "destination": "Nairobi"
+  }
+]

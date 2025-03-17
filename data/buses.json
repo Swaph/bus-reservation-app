@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "name": " Jiji Bus",
+    "numberPlate": "KDJ 036C",
+    "type": "AC coach",
+    "fare": 1800,
+    "departureTime": "6:30 am",
+    "arrivalTime": "3:00 pm",
+    "route_id": 1
+  },
+  {
+    "id": 2,
+    "name": "Barizi Coach",
+    "numberPlate": "KDE 668I",
+    "type": "AC coach",
+    "fare": 2000,
+    "departureTime": "10:00 pm",
+    "arrivalTime": "06:30 am",
+    "route_id": 2
+  },
+  {
+    "id": 3,
+    "name": "Kisumu Express",
+    "numberPlate": "KDK 151L",
+    "type": "Bolt bus",
+    "fare": 1500,
+    "departureTime": "7:00 am",
+    "arrivalTime": "1:00 pm",
+    "route_id": 3
+  },
+  {
+    "id": 4,
+    "name": "Kisumu Express",
+    "numberPlate": "KDU 751X",
+    "type": "Mega bus",
+    "fare": 1200,
+    "departureTime": "6:00 pm",
+    "arrivalTime": "12:00 am",
+    "route_id": 4
+  },
+  {
+    "id": 5,
+    "name": "Kakamega Express",
+    "numberPlate": "KDC 101L",
+    "type": "Mega bus",
+    "fare": 1200,
+    "departureTime": "7:00 am",
+    "arrivalTime": "1:00 pm",
+    "route_id": 5
+  },
+  {
+    "id": 6,
+    "name": "Kakamega Express",
+    "numberPlate": "KCA 999W",
+    "type": "Bolt bus",
+    "fare": 1500,
+    "departureTime": "2:00 pm",
+    "arrivalTime": "8:00 am",
+    "route_id": 6
+  },
+  {
+    "id": 7,
+    "name": "Garissa Express",
+    "numberPlate": "KDG 051M",
+    "type": "AC coach",
+    "fare": 1500,
+    "departureTime": "7:00 am",
+    "arrivalTime": "1:00 pm",
+    "route_id": 7
+  },
+  {
+    "id": 8,
+    "name": "Garissa Express",
+    "numberPlate": "KBK 891F",
+    "type": "AC coach",
+    "fare": 1200,
+    "departureTime": "2:00 pm",
+    "arrivalTime": "8:00 am",
+    "route_id": 8
+  },
+  {
+    "id": 9,
+    "name": "Wajir Express",
+    "numberPlate": "KBM 098G",
+    "type": "AC coach",
+    "fare": 2500,
+    "departureTime": "7:00 am",
+    "arrivalTime": "1:00 pm",
+    "route_id": 9
+  },
+  {
+    "id": 10,
+    "name": "Wajir Express",
+    "numberPlate": "KCP 125V",
+    "type": "Bolt bus",
+    "fare": 2000,
+    "departureTime": "2:00 pm",
+    "arrivalTime": "8:00 am",
+    "route_id": 10
+  }
+]

@@ -1,0 +1,2102 @@
+[
+  {
+    "bus_id": 1,
+    "seat_number": "1",
+    "available": 1
+  },
+  {
+    "bus_id": 1,
+    "seat_number": "2",
+    "available": 1
+  },
+  {
+    "bus_id": 1,
+    "seat_number": "3",
+    "available": 1
+  },
+  {
+    "bus_id": 1,
+    "seat_number": "4",
+    "available": 1
+  },
+  {
+    "bus_id": 1,
+    "seat_number": "5",
+    "available": 1
+  },
+  {
+    "bus_id": 1,
+    "seat_number": "6",
+    "available": 0
+  },
+  {
+    "bus_id": 1,
+    "seat_number": "7",
+    "available": 0
+  },
+  {
+    "bus_id": 1,
+    "seat_number": "8",
+    "available": 1
+  },
+  {
+    "bus_id": 1,
+    "seat_number": "9",
+    "available": 1
+  },
+  {
+    "bus_id": 1,
+    "seat_number": "10",
+    "available": 1
+  },
+  {
+    "bus_id": 1,
+    "seat_number": "11",
+    "available": 1
+  },
+  {
+    "bus_id": 1,
+    "seat_number": "12",
+    "available": 1
+  },
+  {
+    "bus_id": 1,
+    "seat_number": "13",
+    "available": 1
+  },
+  {
+    "bus_id": 1,
+    "seat_number": "14",
+    "available": 1
+  },
+  {
+    "bus_id": 1,
+    "seat_number": "15",
+    "available": 0
+  },
+  {
+    "bus_id": 1,
+    "seat_number": "16",
+    "available": 1
+  },
+  {
+    "bus_id": 1,
+    "seat_number": "17",
+    "available": 1
+  },
+  {
+    "bus_id": 1,
+    "seat_number": "18",
+    "available": 1
+  },
+  {
+    "bus_id": 1,
+    "seat_number": "19",
+    "available": 1
+  },
+  {
+    "bus_id": 1,
+    "seat_number": "20",
+    "available": 1
+  },
+  {
+    "bus_id": 1,
+    "seat_number": "21",
+    "available": 1
+  },
+  {
+    "bus_id": 1,
+    "seat_number": "22",
+    "available": 1
+  },
+  {
+    "bus_id": 1,
+    "seat_number": "23",
+    "available": 0
+  },
+  {
+    "bus_id": 1,
+    "seat_number": "24",
+    "available": 1
+  },
+  {
+    "bus_id": 1,
+    "seat_number": "25",
+    "available": 1
+  },
+  {
+    "bus_id": 1,
+    "seat_number": "26",
+    "available": 1
+  },
+  {
+    "bus_id": 1,
+    "seat_number": "27",
+    "available": 0
+  },
+  {
+    "bus_id": 1,
+    "seat_number": "28",
+    "available": 1
+  },
+  {
+    "bus_id": 1,
+    "seat_number": "29",
+    "available": 1
+  },
+  {
+    "bus_id": 1,
+    "seat_number": "30",
+    "available": 1
+  },
+  {
+    "bus_id": 1,
+    "seat_number": "31",
+    "available": 1
+  },
+  {
+    "bus_id": 1,
+    "seat_number": "32",
+    "available": 1
+  },
+  {
+    "bus_id": 1,
+    "seat_number": "33",
+    "available": 1
+  },
+  {
+    "bus_id": 1,
+    "seat_number": "34",
+    "available": 1
+  },
+  {
+    "bus_id": 1,
+    "seat_number": "35",
+    "available": 0
+  },
+  {
+    "bus_id": 1,
+    "seat_number": "36",
+    "available": 1
+  },
+  {
+    "bus_id": 1,
+    "seat_number": "37",
+    "available": 1
+  },
+  {
+    "bus_id": 1,
+    "seat_number": "38",
+    "available": 0
+  },
+  {
+    "bus_id": 1,
+    "seat_number": "39",
+    "available": 1
+  },
+  {
+    "bus_id": 1,
+    "seat_number": "40",
+    "available": 0
+  },
+  {
+    "bus_id": 1,
+    "seat_number": "Driver",
+    "available": 0
+  },
+  {
+    "bus_id": 1,
+    "seat_number": "ICE",
+    "available": 0
+  },
+  {
+    "bus_id": 2,
+    "seat_number": "1",
+    "available": 1
+  },
+  {
+    "bus_id": 2,
+    "seat_number": "2",
+    "available": 1
+  },
+  {
+    "bus_id": 2,
+    "seat_number": "3",
+    "available": 1
+  },
+  {
+    "bus_id": 2,
+    "seat_number": "4",
+    "available": 1
+  },
+  {
+    "bus_id": 2,
+    "seat_number": "5",
+    "available": 1
+  },
+  {
+    "bus_id": 2,
+    "seat_number": "6",
+    "available": 1
+  },
+  {
+    "bus_id": 2,
+    "seat_number": "7",
+    "available": 1
+  },
+  {
+    "bus_id": 2,
+    "seat_number": "8",
+    "available": 1
+  },
+  {
+    "bus_id": 2,
+    "seat_number": "9",
+    "available": 1
+  },
+  {
+    "bus_id": 2,
+    "seat_number": "10",
+    "available": 1
+  },
+  {
+    "bus_id": 2,
+    "seat_number": "11",
+    "available": 1
+  },
+  {
+    "bus_id": 2,
+    "seat_number": "12",
+    "available": 1
+  },
+  {
+    "bus_id": 2,
+    "seat_number": "13",
+    "available": 1
+  },
+  {
+    "bus_id": 2,
+    "seat_number": "14",
+    "available": 1
+  },
+  {
+    "bus_id": 2,
+    "seat_number": "15",
+    "available": 1
+  },
+  {
+    "bus_id": 2,
+    "seat_number": "16",
+    "available": 1
+  },
+  {
+    "bus_id": 2,
+    "seat_number": "17",
+    "available": 1
+  },
+  {
+    "bus_id": 2,
+    "seat_number": "18",
+    "available": 1
+  },
+  {
+    "bus_id": 2,
+    "seat_number": "19",
+    "available": 1
+  },
+  {
+    "bus_id": 2,
+    "seat_number": "20",
+    "available": 1
+  },
+  {
+    "bus_id": 2,
+    "seat_number": "21",
+    "available": 1
+  },
+  {
+    "bus_id": 2,
+    "seat_number": "22",
+    "available": 1
+  },
+  {
+    "bus_id": 2,
+    "seat_number": "23",
+    "available": 1
+  },
+  {
+    "bus_id": 2,
+    "seat_number": "24",
+    "available": 1
+  },
+  {
+    "bus_id": 2,
+    "seat_number": "25",
+    "available": 1
+  },
+  {
+    "bus_id": 2,
+    "seat_number": "26",
+    "available": 1
+  },
+  {
+    "bus_id": 2,
+    "seat_number": "27",
+    "available": 1
+  },
+  {
+    "bus_id": 2,
+    "seat_number": "28",
+    "available": 1
+  },
+  {
+    "bus_id": 2,
+    "seat_number": "29",
+    "available": 1
+  },
+  {
+    "bus_id": 2,
+    "seat_number": "30",
+    "available": 1
+  },
+  {
+    "bus_id": 2,
+    "seat_number": "31",
+    "available": 1
+  },
+  {
+    "bus_id": 2,
+    "seat_number": "32",
+    "available": 1
+  },
+  {
+    "bus_id": 2,
+    "seat_number": "33",
+    "available": 1
+  },
+  {
+    "bus_id": 2,
+    "seat_number": "34",
+    "available": 1
+  },
+  {
+    "bus_id": 2,
+    "seat_number": "35",
+    "available": 1
+  },
+  {
+    "bus_id": 2,
+    "seat_number": "36",
+    "available": 1
+  },
+  {
+    "bus_id": 2,
+    "seat_number": "37",
+    "available": 1
+  },
+  {
+    "bus_id": 2,
+    "seat_number": "38",
+    "available": 0
+  },
+  {
+    "bus_id": 2,
+    "seat_number": "39",
+    "available": 1
+  },
+  {
+    "bus_id": 2,
+    "seat_number": "40",
+    "available": 1
+  },
+  {
+    "bus_id": 2,
+    "seat_number": "Driver",
+    "available": 0
+  },
+  {
+    "bus_id": 2,
+    "seat_number": "ICE",
+    "available": 0
+  },
+  {
+    "bus_id": 3,
+    "seat_number": "1",
+    "available": 1
+  },
+  {
+    "bus_id": 3,
+    "seat_number": "2",
+    "available": 1
+  },
+  {
+    "bus_id": 3,
+    "seat_number": "3",
+    "available": 1
+  },
+  {
+    "bus_id": 3,
+    "seat_number": "4",
+    "available": 1
+  },
+  {
+    "bus_id": 3,
+    "seat_number": "5",
+    "available": 1
+  },
+  {
+    "bus_id": 3,
+    "seat_number": "6",
+    "available": 1
+  },
+  {
+    "bus_id": 3,
+    "seat_number": "7",
+    "available": 1
+  },
+  {
+    "bus_id": 3,
+    "seat_number": "8",
+    "available": 1
+  },
+  {
+    "bus_id": 3,
+    "seat_number": "9",
+    "available": 1
+  },
+  {
+    "bus_id": 3,
+    "seat_number": "10",
+    "available": 1
+  },
+  {
+    "bus_id": 3,
+    "seat_number": "11",
+    "available": 1
+  },
+  {
+    "bus_id": 3,
+    "seat_number": "12",
+    "available": 1
+  },
+  {
+    "bus_id": 3,
+    "seat_number": "13",
+    "available": 1
+  },
+  {
+    "bus_id": 3,
+    "seat_number": "14",
+    "available": 1
+  },
+  {
+    "bus_id": 3,
+    "seat_number": "15",
+    "available": 1
+  },
+  {
+    "bus_id": 3,
+    "seat_number": "16",
+    "available": 1
+  },
+  {
+    "bus_id": 3,
+    "seat_number": "17",
+    "available": 1
+  },
+  {
+    "bus_id": 3,
+    "seat_number": "18",
+    "available": 1
+  },
+  {
+    "bus_id": 3,
+    "seat_number": "19",
+    "available": 1
+  },
+  {
+    "bus_id": 3,
+    "seat_number": "20",
+    "available": 1
+  },
+  {
+    "bus_id": 3,
+    "seat_number": "21",
+    "available": 1
+  },
+  {
+    "bus_id": 3,
+    "seat_number": "22",
+    "available": 1
+  },
+  {
+    "bus_id": 3,
+    "seat_number": "23",
+    "available": 1
+  },
+  {
+    "bus_id": 3,
+    "seat_number": "24",
+    "available": 1
+  },
+  {
+    "bus_id": 3,
+    "seat_number": "25",
+    "available": 1
+  },
+  {
+    "bus_id": 3,
+    "seat_number": "26",
+    "available": 1
+  },
+  {
+    "bus_id": 3,
+    "seat_number": "27",
+    "available": 1
+  },
+  {
+    "bus_id": 3,
+    "seat_number": "28",
+    "available": 1
+  },
+  {
+    "bus_id": 3,
+    "seat_number": "29",
+    "available": 1
+  },
+  {
+    "bus_id": 3,
+    "seat_number": "30",
+    "available": 1
+  },
+  {
+    "bus_id": 3,
+    "seat_number": "31",
+    "available": 0
+  },
+  {
+    "bus_id": 3,
+    "seat_number": "32",
+    "available": 1
+  },
+  {
+    "bus_id": 3,
+    "seat_number": "33",
+    "available": 1
+  },
+  {
+    "bus_id": 3,
+    "seat_number": "34",
+    "available": 1
+  },
+  {
+    "bus_id": 3,
+    "seat_number": "35",
+    "available": 1
+  },
+  {
+    "bus_id": 3,
+    "seat_number": "36",
+    "available": 1
+  },
+  {
+    "bus_id": 3,
+    "seat_number": "37",
+    "available": 1
+  },
+  {
+    "bus_id": 3,
+    "seat_number": "38",
+    "available": 0
+  },
+  {
+    "bus_id": 3,
+    "seat_number": "39",
+    "available": 1
+  },
+  {
+    "bus_id": 3,
+    "seat_number": "40",
+    "available": 1
+  },
+  {
+    "bus_id": 3,
+    "seat_number": "Driver",
+    "available": 0
+  },
+  {
+    "bus_id": 3,
+    "seat_number": "ICE",
+    "available": 0
+  },
+  {
+    "bus_id": 4,
+    "seat_number": "1",
+    "available": 1
+  },
+  {
+    "bus_id": 4,
+    "seat_number": "2",
+    "available": 1
+  },
+  {
+    "bus_id": 4,
+    "seat_number": "3",
+    "available": 1
+  },
+  {
+    "bus_id": 4,
+    "seat_number": "4",
+    "available": 1
+  },
+  {
+    "bus_id": 4,
+    "seat_number": "5",
+    "available": 1
+  },
+  {
+    "bus_id": 4,
+    "seat_number": "6",
+    "available": 1
+  },
+  {
+    "bus_id": 4,
+    "seat_number": "7",
+    "available": 1
+  },
+  {
+    "bus_id": 4,
+    "seat_number": "8",
+    "available": 1
+  },
+  {
+    "bus_id": 4,
+    "seat_number": "9",
+    "available": 1
+  },
+  {
+    "bus_id": 4,
+    "seat_number": "10",
+    "available": 1
+  },
+  {
+    "bus_id": 4,
+    "seat_number": "11",
+    "available": 1
+  },
+  {
+    "bus_id": 4,
+    "seat_number": "12",
+    "available": 1
+  },
+  {
+    "bus_id": 4,
+    "seat_number": "13",
+    "available": 1
+  },
+  {
+    "bus_id": 4,
+    "seat_number": "14",
+    "available": 1
+  },
+  {
+    "bus_id": 4,
+    "seat_number": "15",
+    "available": 1
+  },
+  {
+    "bus_id": 4,
+    "seat_number": "16",
+    "available": 1
+  },
+  {
+    "bus_id": 4,
+    "seat_number": "17",
+    "available": 1
+  },
+  {
+    "bus_id": 4,
+    "seat_number": "18",
+    "available": 1
+  },
+  {
+    "bus_id": 4,
+    "seat_number": "19",
+    "available": 1
+  },
+  {
+    "bus_id": 4,
+    "seat_number": "20",
+    "available": 1
+  },
+  {
+    "bus_id": 4,
+    "seat_number": "21",
+    "available": 1
+  },
+  {
+    "bus_id": 4,
+    "seat_number": "22",
+    "available": 1
+  },
+  {
+    "bus_id": 4,
+    "seat_number": "23",
+    "available": 1
+  },
+  {
+    "bus_id": 4,
+    "seat_number": "24",
+    "available": 1
+  },
+  {
+    "bus_id": 4,
+    "seat_number": "25",
+    "available": 1
+  },
+  {
+    "bus_id": 4,
+    "seat_number": "26",
+    "available": 1
+  },
+  {
+    "bus_id": 4,
+    "seat_number": "27",
+    "available": 1
+  },
+  {
+    "bus_id": 4,
+    "seat_number": "28",
+    "available": 1
+  },
+  {
+    "bus_id": 4,
+    "seat_number": "29",
+    "available": 1
+  },
+  {
+    "bus_id": 4,
+    "seat_number": "30",
+    "available": 1
+  },
+  {
+    "bus_id": 4,
+    "seat_number": "31",
+    "available": 1
+  },
+  {
+    "bus_id": 4,
+    "seat_number": "32",
+    "available": 1
+  },
+  {
+    "bus_id": 4,
+    "seat_number": "33",
+    "available": 1
+  },
+  {
+    "bus_id": 4,
+    "seat_number": "34",
+    "available": 1
+  },
+  {
+    "bus_id": 4,
+    "seat_number": "35",
+    "available": 1
+  },
+  {
+    "bus_id": 4,
+    "seat_number": "36",
+    "available": 1
+  },
+  {
+    "bus_id": 4,
+    "seat_number": "37",
+    "available": 1
+  },
+  {
+    "bus_id": 4,
+    "seat_number": "38",
+    "available": 0
+  },
+  {
+    "bus_id": 4,
+    "seat_number": "39",
+    "available": 1
+  },
+  {
+    "bus_id": 4,
+    "seat_number": "40",
+    "available": 1
+  },
+  {
+    "bus_id": 4,
+    "seat_number": "Driver",
+    "available": 0
+  },
+  {
+    "bus_id": 4,
+    "seat_number": "ICE",
+    "available": 0
+  },
+  {
+    "bus_id": 5,
+    "seat_number": "1",
+    "available": 1
+  },
+  {
+    "bus_id": 5,
+    "seat_number": "2",
+    "available": 1
+  },
+  {
+    "bus_id": 5,
+    "seat_number": "3",
+    "available": 1
+  },
+  {
+    "bus_id": 5,
+    "seat_number": "4",
+    "available": 1
+  },
+  {
+    "bus_id": 5,
+    "seat_number": "5",
+    "available": 1
+  },
+  {
+    "bus_id": 5,
+    "seat_number": "6",
+    "available": 1
+  },
+  {
+    "bus_id": 5,
+    "seat_number": "7",
+    "available": 1
+  },
+  {
+    "bus_id": 5,
+    "seat_number": "8",
+    "available": 1
+  },
+  {
+    "bus_id": 5,
+    "seat_number": "9",
+    "available": 1
+  },
+  {
+    "bus_id": 5,
+    "seat_number": "10",
+    "available": 1
+  },
+  {
+    "bus_id": 5,
+    "seat_number": "11",
+    "available": 1
+  },
+  {
+    "bus_id": 5,
+    "seat_number": "12",
+    "available": 1
+  },
+  {
+    "bus_id": 5,
+    "seat_number": "13",
+    "available": 1
+  },
+  {
+    "bus_id": 5,
+    "seat_number": "14",
+    "available": 1
+  },
+  {
+    "bus_id": 5,
+    "seat_number": "15",
+    "available": 1
+  },
+  {
+    "bus_id": 5,
+    "seat_number": "16",
+    "available": 1
+  },
+  {
+    "bus_id": 5,
+    "seat_number": "17",
+    "available": 1
+  },
+  {
+    "bus_id": 5,
+    "seat_number": "18",
+    "available": 1
+  },
+  {
+    "bus_id": 5,
+    "seat_number": "19",
+    "available": 1
+  },
+  {
+    "bus_id": 5,
+    "seat_number": "20",
+    "available": 1
+  },
+  {
+    "bus_id": 5,
+    "seat_number": "21",
+    "available": 1
+  },
+  {
+    "bus_id": 5,
+    "seat_number": "22",
+    "available": 1
+  },
+  {
+    "bus_id": 5,
+    "seat_number": "23",
+    "available": 1
+  },
+  {
+    "bus_id": 5,
+    "seat_number": "24",
+    "available": 1
+  },
+  {
+    "bus_id": 5,
+    "seat_number": "25",
+    "available": 1
+  },
+  {
+    "bus_id": 5,
+    "seat_number": "26",
+    "available": 1
+  },
+  {
+    "bus_id": 5,
+    "seat_number": "27",
+    "available": 1
+  },
+  {
+    "bus_id": 5,
+    "seat_number": "28",
+    "available": 1
+  },
+  {
+    "bus_id": 5,
+    "seat_number": "29",
+    "available": 1
+  },
+  {
+    "bus_id": 5,
+    "seat_number": "30",
+    "available": 1
+  },
+  {
+    "bus_id": 5,
+    "seat_number": "31",
+    "available": 1
+  },
+  {
+    "bus_id": 5,
+    "seat_number": "32",
+    "available": 1
+  },
+  {
+    "bus_id": 5,
+    "seat_number": "33",
+    "available": 1
+  },
+  {
+    "bus_id": 5,
+    "seat_number": "34",
+    "available": 1
+  },
+  {
+    "bus_id": 5,
+    "seat_number": "35",
+    "available": 1
+  },
+  {
+    "bus_id": 5,
+    "seat_number": "36",
+    "available": 1
+  },
+  {
+    "bus_id": 5,
+    "seat_number": "37",
+    "available": 1
+  },
+  {
+    "bus_id": 5,
+    "seat_number": "38",
+    "available": 0
+  },
+  {
+    "bus_id": 5,
+    "seat_number": "39",
+    "available": 1
+  },
+  {
+    "bus_id": 5,
+    "seat_number": "40",
+    "available": 1
+  },
+  {
+    "bus_id": 5,
+    "seat_number": "Driver",
+    "available": 0
+  },
+  {
+    "bus_id": 5,
+    "seat_number": "ICE",
+    "available": 0
+  },
+  {
+    "bus_id": 6,
+    "seat_number": "1",
+    "available": 1
+  },
+  {
+    "bus_id": 6,
+    "seat_number": "2",
+    "available": 1
+  },
+  {
+    "bus_id": 6,
+    "seat_number": "3",
+    "available": 1
+  },
+  {
+    "bus_id": 6,
+    "seat_number": "4",
+    "available": 1
+  },
+  {
+    "bus_id": 6,
+    "seat_number": "5",
+    "available": 1
+  },
+  {
+    "bus_id": 6,
+    "seat_number": "6",
+    "available": 1
+  },
+  {
+    "bus_id": 6,
+    "seat_number": "7",
+    "available": 1
+  },
+  {
+    "bus_id": 6,
+    "seat_number": "8",
+    "available": 1
+  },
+  {
+    "bus_id": 6,
+    "seat_number": "9",
+    "available": 1
+  },
+  {
+    "bus_id": 6,
+    "seat_number": "10",
+    "available": 1
+  },
+  {
+    "bus_id": 6,
+    "seat_number": "11",
+    "available": 1
+  },
+  {
+    "bus_id": 6,
+    "seat_number": "12",
+    "available": 1
+  },
+  {
+    "bus_id": 6,
+    "seat_number": "13",
+    "available": 1
+  },
+  {
+    "bus_id": 6,
+    "seat_number": "14",
+    "available": 1
+  },
+  {
+    "bus_id": 6,
+    "seat_number": "15",
+    "available": 1
+  },
+  {
+    "bus_id": 6,
+    "seat_number": "16",
+    "available": 1
+  },
+  {
+    "bus_id": 6,
+    "seat_number": "17",
+    "available": 1
+  },
+  {
+    "bus_id": 6,
+    "seat_number": "18",
+    "available": 1
+  },
+  {
+    "bus_id": 6,
+    "seat_number": "19",
+    "available": 1
+  },
+  {
+    "bus_id": 6,
+    "seat_number": "20",
+    "available": 1
+  },
+  {
+    "bus_id": 6,
+    "seat_number": "21",
+    "available": 1
+  },
+  {
+    "bus_id": 6,
+    "seat_number": "22",
+    "available": 1
+  },
+  {
+    "bus_id": 6,
+    "seat_number": "23",
+    "available": 1
+  },
+  {
+    "bus_id": 6,
+    "seat_number": "24",
+    "available": 1
+  },
+  {
+    "bus_id": 6,
+    "seat_number": "25",
+    "available": 1
+  },
+  {
+    "bus_id": 6,
+    "seat_number": "26",
+    "available": 1
+  },
+  {
+    "bus_id": 6,
+    "seat_number": "27",
+    "available": 1
+  },
+  {
+    "bus_id": 6,
+    "seat_number": "28",
+    "available": 1
+  },
+  {
+    "bus_id": 6,
+    "seat_number": "29",
+    "available": 1
+  },
+  {
+    "bus_id": 6,
+    "seat_number": "30",
+    "available": 1
+  },
+  {
+    "bus_id": 6,
+    "seat_number": "31",
+    "available": 1
+  },
+  {
+    "bus_id": 6,
+    "seat_number": "32",
+    "available": 1
+  },
+  {
+    "bus_id": 6,
+    "seat_number": "33",
+    "available": 1
+  },
+  {
+    "bus_id": 6,
+    "seat_number": "34",
+    "available": 1
+  },
+  {
+    "bus_id": 6,
+    "seat_number": "35",
+    "available": 1
+  },
+  {
+    "bus_id": 6,
+    "seat_number": "36",
+    "available": 1
+  },
+  {
+    "bus_id": 6,
+    "seat_number": "37",
+    "available": 1
+  },
+  {
+    "bus_id": 6,
+    "seat_number": "38",
+    "available": 0
+  },
+  {
+    "bus_id": 6,
+    "seat_number": "39",
+    "available": 1
+  },
+  {
+    "bus_id": 6,
+    "seat_number": "40",
+    "available": 1
+  },
+  {
+    "bus_id": 6,
+    "seat_number": "Driver",
+    "available": 0
+  },
+  {
+    "bus_id": 6,
+    "seat_number": "ICE",
+    "available": 0
+  },
+  {
+    "bus_id": 7,
+    "seat_number": "1",
+    "available": 1
+  },
+  {
+    "bus_id": 7,
+    "seat_number": "2",
+    "available": 1
+  },
+  {
+    "bus_id": 7,
+    "seat_number": "3",
+    "available": 1
+  },
+  {
+    "bus_id": 7,
+    "seat_number": "4",
+    "available": 1
+  },
+  {
+    "bus_id": 7,
+    "seat_number": "5",
+    "available": 1
+  },
+  {
+    "bus_id": 7,
+    "seat_number": "6",
+    "available": 1
+  },
+  {
+    "bus_id": 7,
+    "seat_number": "7",
+    "available": 1
+  },
+  {
+    "bus_id": 7,
+    "seat_number": "8",
+    "available": 1
+  },
+  {
+    "bus_id": 7,
+    "seat_number": "9",
+    "available": 1
+  },
+  {
+    "bus_id": 7,
+    "seat_number": "10",
+    "available": 1
+  },
+  {
+    "bus_id": 7,
+    "seat_number": "11",
+    "available": 1
+  },
+  {
+    "bus_id": 7,
+    "seat_number": "12",
+    "available": 1
+  },
+  {
+    "bus_id": 7,
+    "seat_number": "13",
+    "available": 1
+  },
+  {
+    "bus_id": 7,
+    "seat_number": "14",
+    "available": 1
+  },
+  {
+    "bus_id": 7,
+    "seat_number": "15",
+    "available": 1
+  },
+  {
+    "bus_id": 7,
+    "seat_number": "16",
+    "available": 1
+  },
+  {
+    "bus_id": 7,
+    "seat_number": "17",
+    "available": 1
+  },
+  {
+    "bus_id": 7,
+    "seat_number": "18",
+    "available": 1
+  },
+  {
+    "bus_id": 7,
+    "seat_number": "19",
+    "available": 1
+  },
+  {
+    "bus_id": 7,
+    "seat_number": "20",
+    "available": 1
+  },
+  {
+    "bus_id": 7,
+    "seat_number": "21",
+    "available": 1
+  },
+  {
+    "bus_id": 7,
+    "seat_number": "22",
+    "available": 1
+  },
+  {
+    "bus_id": 7,
+    "seat_number": "23",
+    "available": 1
+  },
+  {
+    "bus_id": 7,
+    "seat_number": "24",
+    "available": 1
+  },
+  {
+    "bus_id": 7,
+    "seat_number": "25",
+    "available": 1
+  },
+  {
+    "bus_id": 7,
+    "seat_number": "26",
+    "available": 1
+  },
+  {
+    "bus_id": 7,
+    "seat_number": "27",
+    "available": 1
+  },
+  {
+    "bus_id": 7,
+    "seat_number": "28",
+    "available": 1
+  },
+  {
+    "bus_id": 7,
+    "seat_number": "29",
+    "available": 1
+  },
+  {
+    "bus_id": 7,
+    "seat_number": "30",
+    "available": 1
+  },
+  {
+    "bus_id": 7,
+    "seat_number": "31",
+    "available": 1
+  },
+  {
+    "bus_id": 7,
+    "seat_number": "32",
+    "available": 1
+  },
+  {
+    "bus_id": 7,
+    "seat_number": "33",
+    "available": 1
+  },
+  {
+    "bus_id": 7,
+    "seat_number": "34",
+    "available": 1
+  },
+  {
+    "bus_id": 7,
+    "seat_number": "35",
+    "available": 1
+  },
+  {
+    "bus_id": 7,
+    "seat_number": "36",
+    "available": 1
+  },
+  {
+    "bus_id": 7,
+    "seat_number": "37",
+    "available": 1
+  },
+  {
+    "bus_id": 7,
+    "seat_number": "38",
+    "available": 0
+  },
+  {
+    "bus_id": 7,
+    "seat_number": "39",
+    "available": 1
+  },
+  {
+    "bus_id": 7,
+    "seat_number": "40",
+    "available": 1
+  },
+  {
+    "bus_id": 7,
+    "seat_number": "Driver",
+    "available": 0
+  },
+  {
+    "bus_id": 7,
+    "seat_number": "ICE",
+    "available": 0
+  },
+  {
+    "bus_id": 8,
+    "seat_number": "1",
+    "available": 1
+  },
+  {
+    "bus_id": 8,
+    "seat_number": "2",
+    "available": 1
+  },
+  {
+    "bus_id": 8,
+    "seat_number": "3",
+    "available": 1
+  },
+  {
+    "bus_id": 8,
+    "seat_number": "4",
+    "available": 1
+  },
+  {
+    "bus_id": 8,
+    "seat_number": "5",
+    "available": 1
+  },
+  {
+    "bus_id": 8,
+    "seat_number": "6",
+    "available": 1
+  },
+  {
+    "bus_id": 8,
+    "seat_number": "7",
+    "available": 1
+  },
+  {
+    "bus_id": 8,
+    "seat_number": "8",
+    "available": 1
+  },
+  {
+    "bus_id": 8,
+    "seat_number": "9",
+    "available": 1
+  },
+  {
+    "bus_id": 8,
+    "seat_number": "10",
+    "available": 1
+  },
+  {
+    "bus_id": 8,
+    "seat_number": "11",
+    "available": 1
+  },
+  {
+    "bus_id": 8,
+    "seat_number": "12",
+    "available": 1
+  },
+  {
+    "bus_id": 8,
+    "seat_number": "13",
+    "available": 1
+  },
+  {
+    "bus_id": 8,
+    "seat_number": "14",
+    "available": 1
+  },
+  {
+    "bus_id": 8,
+    "seat_number": "15",
+    "available": 1
+  },
+  {
+    "bus_id": 8,
+    "seat_number": "16",
+    "available": 1
+  },
+  {
+    "bus_id": 8,
+    "seat_number": "17",
+    "available": 1
+  },
+  {
+    "bus_id": 8,
+    "seat_number": "18",
+    "available": 1
+  },
+  {
+    "bus_id": 8,
+    "seat_number": "19",
+    "available": 1
+  },
+  {
+    "bus_id": 8,
+    "seat_number": "20",
+    "available": 1
+  },
+  {
+    "bus_id": 8,
+    "seat_number": "21",
+    "available": 1
+  },
+  {
+    "bus_id": 8,
+    "seat_number": "22",
+    "available": 1
+  },
+  {
+    "bus_id": 8,
+    "seat_number": "23",
+    "available": 1
+  },
+  {
+    "bus_id": 8,
+    "seat_number": "24",
+    "available": 1
+  },
+  {
+    "bus_id": 8,
+    "seat_number": "25",
+    "available": 1
+  },
+  {
+    "bus_id": 8,
+    "seat_number": "26",
+    "available": 1
+  },
+  {
+    "bus_id": 8,
+    "seat_number": "27",
+    "available": 1
+  },
+  {
+    "bus_id": 8,
+    "seat_number": "28",
+    "available": 1
+  },
+  {
+    "bus_id": 8,
+    "seat_number": "29",
+    "available": 1
+  },
+  {
+    "bus_id": 8,
+    "seat_number": "30",
+    "available": 1
+  },
+  {
+    "bus_id": 8,
+    "seat_number": "31",
+    "available": 1
+  },
+  {
+    "bus_id": 8,
+    "seat_number": "32",
+    "available": 1
+  },
+  {
+    "bus_id": 8,
+    "seat_number": "33",
+    "available": 1
+  },
+  {
+    "bus_id": 8,
+    "seat_number": "34",
+    "available": 1
+  },
+  {
+    "bus_id": 8,
+    "seat_number": "35",
+    "available": 1
+  },
+  {
+    "bus_id": 8,
+    "seat_number": "36",
+    "available": 1
+  },
+  {
+    "bus_id": 8,
+    "seat_number": "37",
+    "available": 1
+  },
+  {
+    "bus_id": 8,
+    "seat_number": "38",
+    "available": 0
+  },
+  {
+    "bus_id": 8,
+    "seat_number": "39",
+    "available": 1
+  },
+  {
+    "bus_id": 8,
+    "seat_number": "40",
+    "available": 1
+  },
+  {
+    "bus_id": 8,
+    "seat_number": "Driver",
+    "available": 0
+  },
+  {
+    "bus_id": 8,
+    "seat_number": "ICE",
+    "available": 0
+  },
+  {
+    "bus_id": 9,
+    "seat_number": "1",
+    "available": 1
+  },
+  {
+    "bus_id": 9,
+    "seat_number": "2",
+    "available": 1
+  },
+  {
+    "bus_id": 9,
+    "seat_number": "3",
+    "available": 1
+  },
+  {
+    "bus_id": 9,
+    "seat_number": "4",
+    "available": 1
+  },
+  {
+    "bus_id": 9,
+    "seat_number": "5",
+    "available": 1
+  },
+  {
+    "bus_id": 9,
+    "seat_number": "6",
+    "available": 1
+  },
+  {
+    "bus_id": 9,
+    "seat_number": "7",
+    "available": 1
+  },
+  {
+    "bus_id": 9,
+    "seat_number": "8",
+    "available": 1
+  },
+  {
+    "bus_id": 9,
+    "seat_number": "9",
+    "available": 1
+  },
+  {
+    "bus_id": 9,
+    "seat_number": "10",
+    "available": 1
+  },
+  {
+    "bus_id": 9,
+    "seat_number": "11",
+    "available": 1
+  },
+  {
+    "bus_id": 9,
+    "seat_number": "12",
+    "available": 1
+  },
+  {
+    "bus_id": 9,
+    "seat_number": "13",
+    "available": 1
+  },
+  {
+    "bus_id": 9,
+    "seat_number": "14",
+    "available": 1
+  },
+  {
+    "bus_id": 9,
+    "seat_number": "15",
+    "available": 1
+  },
+  {
+    "bus_id": 9,
+    "seat_number": "16",
+    "available": 1
+  },
+  {
+    "bus_id": 9,
+    "seat_number": "17",
+    "available": 1
+  },
+  {
+    "bus_id": 9,
+    "seat_number": "18",
+    "available": 1
+  },
+  {
+    "bus_id": 9,
+    "seat_number": "19",
+    "available": 1
+  },
+  {
+    "bus_id": 9,
+    "seat_number": "20",
+    "available": 1
+  },
+  {
+    "bus_id": 9,
+    "seat_number": "21",
+    "available": 1
+  },
+  {
+    "bus_id": 9,
+    "seat_number": "22",
+    "available": 1
+  },
+  {
+    "bus_id": 9,
+    "seat_number": "23",
+    "available": 1
+  },
+  {
+    "bus_id": 9,
+    "seat_number": "24",
+    "available": 1
+  },
+  {
+    "bus_id": 9,
+    "seat_number": "25",
+    "available": 1
+  },
+  {
+    "bus_id": 9,
+    "seat_number": "26",
+    "available": 1
+  },
+  {
+    "bus_id": 9,
+    "seat_number": "27",
+    "available": 1
+  },
+  {
+    "bus_id": 9,
+    "seat_number": "28",
+    "available": 1
+  },
+  {
+    "bus_id": 9,
+    "seat_number": "29",
+    "available": 1
+  },
+  {
+    "bus_id": 9,
+    "seat_number": "30",
+    "available": 1
+  },
+  {
+    "bus_id": 9,
+    "seat_number": "31",
+    "available": 1
+  },
+  {
+    "bus_id": 9,
+    "seat_number": "32",
+    "available": 1
+  },
+  {
+    "bus_id": 9,
+    "seat_number": "33",
+    "available": 1
+  },
+  {
+    "bus_id": 9,
+    "seat_number": "34",
+    "available": 1
+  },
+  {
+    "bus_id": 9,
+    "seat_number": "35",
+    "available": 1
+  },
+  {
+    "bus_id": 9,
+    "seat_number": "36",
+    "available": 1
+  },
+  {
+    "bus_id": 9,
+    "seat_number": "37",
+    "available": 1
+  },
+  {
+    "bus_id": 9,
+    "seat_number": "38",
+    "available": 0
+  },
+  {
+    "bus_id": 9,
+    "seat_number": "39",
+    "available": 1
+  },
+  {
+    "bus_id": 9,
+    "seat_number": "40",
+    "available": 1
+  },
+  {
+    "bus_id": 9,
+    "seat_number": "Driver",
+    "available": 0
+  },
+  {
+    "bus_id": 9,
+    "seat_number": "ICE",
+    "available": 0
+  },
+  {
+    "bus_id": 10,
+    "seat_number": "1",
+    "available": 1
+  },
+  {
+    "bus_id": 10,
+    "seat_number": "2",
+    "available": 1
+  },
+  {
+    "bus_id": 10,
+    "seat_number": "3",
+    "available": 1
+  },
+  {
+    "bus_id": 10,
+    "seat_number": "4",
+    "available": 1
+  },
+  {
+    "bus_id": 10,
+    "seat_number": "5",
+    "available": 1
+  },
+  {
+    "bus_id": 10,
+    "seat_number": "6",
+    "available": 1
+  },
+  {
+    "bus_id": 10,
+    "seat_number": "7",
+    "available": 1
+  },
+  {
+    "bus_id": 10,
+    "seat_number": "8",
+    "available": 1
+  },
+  {
+    "bus_id": 10,
+    "seat_number": "9",
+    "available": 1
+  },
+  {
+    "bus_id": 10,
+    "seat_number": "10",
+    "available": 1
+  },
+  {
+    "bus_id": 10,
+    "seat_number": "11",
+    "available": 1
+  },
+  {
+    "bus_id": 10,
+    "seat_number": "12",
+    "available": 1
+  },
+  {
+    "bus_id": 10,
+    "seat_number": "13",
+    "available": 1
+  },
+  {
+    "bus_id": 10,
+    "seat_number": "14",
+    "available": 1
+  },
+  {
+    "bus_id": 10,
+    "seat_number": "15",
+    "available": 1
+  },
+  {
+    "bus_id": 10,
+    "seat_number": "16",
+    "available": 1
+  },
+  {
+    "bus_id": 10,
+    "seat_number": "17",
+    "available": 1
+  },
+  {
+    "bus_id": 10,
+    "seat_number": "18",
+    "available": 1
+  },
+  {
+    "bus_id": 10,
+    "seat_number": "19",
+    "available": 1
+  },
+  {
+    "bus_id": 10,
+    "seat_number": "20",
+    "available": 1
+  },
+  {
+    "bus_id": 10,
+    "seat_number": "21",
+    "available": 1
+  },
+  {
+    "bus_id": 10,
+    "seat_number": "22",
+    "available": 1
+  },
+  {
+    "bus_id": 10,
+    "seat_number": "23",
+    "available": 1
+  },
+  {
+    "bus_id": 10,
+    "seat_number": "24",
+    "available": 1
+  },
+  {
+    "bus_id": 10,
+    "seat_number": "25",
+    "available": 1
+  },
+  {
+    "bus_id": 10,
+    "seat_number": "26",
+    "available": 1
+  },
+  {
+    "bus_id": 10,
+    "seat_number": "27",
+    "available": 1
+  },
+  {
+    "bus_id": 10,
+    "seat_number": "28",
+    "available": 1
+  },
+  {
+    "bus_id": 10,
+    "seat_number": "29",
+    "available": 1
+  },
+  {
+    "bus_id": 10,
+    "seat_number": "30",
+    "available": 1
+  },
+  {
+    "bus_id": 10,
+    "seat_number": "31",
+    "available": 1
+  },
+  {
+    "bus_id": 10,
+    "seat_number": "32",
+    "available": 1
+  },
+  {
+    "bus_id": 10,
+    "seat_number": "33",
+    "available": 1
+  },
+  {
+    "bus_id": 10,
+    "seat_number": "34",
+    "available": 1
+  },
+  {
+    "bus_id": 10,
+    "seat_number": "35",
+    "available": 1
+  },
+  {
+    "bus_id": 10,
+    "seat_number": "36",
+    "available": 1
+  },
+  {
+    "bus_id": 10,
+    "seat_number": "37",
+    "available": 1
+  },
+  {
+    "bus_id": 10,
+    "seat_number": "38",
+    "available": 0
+  },
+  {
+    "bus_id": 10,
+    "seat_number": "39",
+    "available": 1
+  },
+  {
+    "bus_id": 10,
+    "seat_number": "40",
+    "available": 1
+  },
+  {
+    "bus_id": 10,
+    "seat_number": "Driver",
+    "available": 0
+  },
+  {
+    "bus_id": 10,
+    "seat_number": "ICE",
+    "available": 0
+  }
+]
