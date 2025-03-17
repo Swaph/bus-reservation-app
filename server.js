@@ -41,8 +41,8 @@ const clearOldReservations = () => {
             return;
         }
         console.log(`✅ Cleared old reservations before ${today}`);
-
         // ✅ Reset seat availability EXCEPT for 'Driver', 'ICE', and '38'
+
         db.run(
             `UPDATE seats SET available = 1 
              WHERE seat_number NOT IN ('Driver', 'ICE', '38')`,
