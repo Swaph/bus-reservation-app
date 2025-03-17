@@ -236,7 +236,7 @@ function validateNationalID(nationalID, errorId) {
     return true;
 }
 
-
+//updated booking logics
 function bookSeats() {
     const selectedSeats = document.querySelectorAll('.seat.selected');
     const passengerInfoData = {};
