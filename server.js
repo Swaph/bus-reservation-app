@@ -31,7 +31,7 @@ app.use(session({
 }));
 
 
-// ✅ Cleanup function: Delete old reservations every midnight
+// ✅ Cleanup function: Delete old reservations every midnight - fix seat availability logic
 const clearOldReservations = () => {
     const today = new Date().toISOString().split("T")[0];
 
