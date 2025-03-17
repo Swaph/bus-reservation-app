@@ -5,45 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bus Reservation</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <div class="container mt-5">
-        <div class="text-center mb-5 position-relative">
-            <img src="images/hero-image.png" alt="Hero Image" class="img-fluid w-100">
-            <div class="overlay-text">
-                <h1 class="display-4">Moving forward, moving you</h1>
-                <p class="lead">Setting the benchmark for transport excellence</p>
-            </div>
-        </div>
-        <div class="card p-4">
-            <h4 class="mb-4">Book Spot</h4>
-            <form id="search-form">
-                <div class="form-row">
-                    <div class="form-group col-md-4">
-                        <label for="from">From:</label>
-                        <select id="from" class="form-control" required>
-                            <option value="">Please Select</option>
-                            <!-- Options will be populated dynamically -->
-                        </select>
-                    </div>
-                    <div class="form-group col-md-4">
-                        <label for="to">To:</label>
-                        <select id="to" class="form-control" required>
-                            <option value="">Please Select</option>
-                            <!-- Options will be populated dynamically -->
-                        </select>
-                    </div>
-                    <div class="form-group col-md-4">
-                        <label for="journeyDate">Journey Date:</label>
-                        <input type="date" id="journeyDate" class="form-control date-picker" required>
-                    </div>
-                </div>
-                <button type="button" onclick="searchBuses()" class="btn btn-primary btn-block">Search</button>
-            </form>
+<div class="container mt-5">
+    <div class="text-center mb-5 position-relative">
+        <img src="images/hero-image.png" alt="Hero Image" class="img-fluid w-100">
+        <div class="overlay-text">
+            <h1 class="display-4">Moving forward, moving you</h1>
+            <p class="lead">Setting the benchmark for transport excellence</p>
         </div>
     </div>
-    <script src="script.js"></script>
+
+    <!-- ✅ USER INFO -->
+    <div id="user-info" class="alert alert-primary text-center" style="display: none;">
+        <h4>Welcome, <span id="user-name"></span>!</h4>
+    </div>
+
+    <div class="card p-4">
+        <h4 class="mb-4">Book Spot</h4>
+        <form id="search-form">
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="from">From:</label>
+                    <select id="from" class="form-control" required>
+                        <option value="">Please Select</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="to">To:</label>
+                    <select id="to" class="form-control" required>
+                        <option value="">Please Select</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="journeyDate">Journey Date:</label>
+                    <input type="date" id="journeyDate" class="form-control date-picker" required>
+                </div>
+            </div>
+            <button type="button" onclick="searchBuses()" class="btn btn-primary btn-block">Search</button>
+        </form>
+    </div>
+
+    <!-- ✅ Logout Button -->
+    <button id="logout" class="btn btn-danger mt-3" style="display: none;">Logout</button>
+
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const user = JSON.parse(sessionStorage.getItem('user'));
+
+        if (user) {
+            document.getElementById('user-info').style.display = "block";
+            document.getElementById('user-name').textContent = `${user.firstName} ${user.lastName}`;
+            document.getElementById('logout').style.display = "block";
+        }
+
+        document.getElementById('logout').addEventListener('click', async () => {
+            await fetch('/api/logout', { method: 'POST' });
+            sessionStorage.removeItem('user'); // Clear session
+            window.location.href = "/login.html";
+        });
+    });
+</script>
+
+<script src="js/script.js"></script>
 </body>
 </html>
