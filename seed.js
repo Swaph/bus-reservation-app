@@ -16,7 +16,7 @@ const routesData = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'rout
 const busesData = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'buses.json'), 'utf8'));
 const seatsData = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'seats.json'), 'utf8'));
 
-// Seed data
+// Seed data from json to database
 db.serialize(() => {
     // Insert routes
     const insertRoute = db.prepare(`INSERT INTO routes (origin, destination) VALUES (?, ?)`);
