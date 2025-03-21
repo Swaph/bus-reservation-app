@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cross-env NODE_ENV=test jest"
+    "test": "cross-env NODE_ENV=test jest",
+    "test:ci": "jest --coverage --testResultsProcessor=jest-sonar-reporter"
   },
   "keywords": [],
   "author": "",
