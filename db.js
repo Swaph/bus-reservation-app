@@ -1,16 +1,19 @@
 const sqlite3 = require('sqlite3').verbose();
 
-const db = new sqlite3.Database('./data/busReservations.db', (err) => {
-    if (err) {
-        console.error('Error opening database:', err.message);
-    } else {
-        console.log('Connected to SQLite database.');
+const isTest = process.env.NODE_ENV === 'test';
+const db = new sqlite3.Database(
+    isTest ? ':memory:' : './data/busReservations.db',
+    (err) => {
+        if (err) {
+            console.error('Error opening database:', err.message);
+        } else {
+            console.log('Connected to SQLite database.');
+        }
     }
-});
+);
 
-// Create tables
+// Create tables (for both in-memory and file-based DBs)
 db.serialize(() => {
-    // Users Table (for authentication, not in JSON but needed)
     db.run(`
         CREATE TABLE IF NOT EXISTS users (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -19,7 +22,6 @@ db.serialize(() => {
         )
     `);
 
-    // Routes Table
     db.run(`
         CREATE TABLE IF NOT EXISTS routes (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -28,7 +30,6 @@ db.serialize(() => {
         )
     `);
 
-    // Buses Table
     db.run(`
         CREATE TABLE IF NOT EXISTS buses (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -43,7 +44,6 @@ db.serialize(() => {
         )
     `);
 
-    // Seats Table (to track seat availability)
     db.run(`
         CREATE TABLE IF NOT EXISTS seats (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -54,7 +54,6 @@ db.serialize(() => {
         )
     `);
 
-    // Reservations Table
     db.run(`
         CREATE TABLE IF NOT EXISTS reservations (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
