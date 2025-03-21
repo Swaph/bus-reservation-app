@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "cross-env NODE_ENV=test jest",
-    "test:ci": "jest --coverage --testResultsProcessor=jest-sonar-reporter"
+    "test:ci": "cross-env NODE_ENV=test jest --coverage --testResultsProcessor=jest-sonar-reporter"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +23,7 @@
   "devDependencies": {
     "cross-env": "^7.0.3",
     "jest": "^29.7.0",
+    "jest-sonar-reporter": "^2.0.0",
     "supertest": "^6.3.3"
   }
 }
