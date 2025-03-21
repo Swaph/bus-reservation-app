@@ -1,18 +1,19 @@
 const sqlite3 = require('sqlite3').verbose();
 
-const isTest = process.env.NODE_ENV === 'test';
-const db = new sqlite3.Database(
-    isTest ? ':memory:' : './data/busReservations.db',
-    (err) => {
+function connectDB(dbPath) {
+    return new sqlite3.Database(dbPath, (err) => {
         if (err) {
             console.error('Error opening database:', err.message);
         } else {
             console.log('Connected to SQLite database.');
         }
-    }
-);
+    });
+}
 
-// Create tables (for both in-memory and file-based DBs)
+const isTest = process.env.NODE_ENV === 'test';
+const db = connectDB(isTest ? ':memory:' : './data/busReservations.db');
+
+// ✅ Create tables (works for both in-memory and file-based DBs)
 db.serialize(() => {
     db.run(`
         CREATE TABLE IF NOT EXISTS users (
@@ -72,3 +73,4 @@ db.serialize(() => {
 });
 
 module.exports = db;
+module.exports.connectDB = connectDB;  // Exported for testing only

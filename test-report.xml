@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testExecutions version="1">
+  <file path="C:\Users\Admin\OneDrive\Desktop\FS2024\SWE4070A\bus-reservation-app\tests\dbError.test.js">
+    <testCase name="Database connection error handling should log error if database connection fails" duration="530"/>
+  </file>
+  <file path="C:\Users\Admin\OneDrive\Desktop\FS2024\SWE4070A\bus-reservation-app\tests\testSeedData.test.js">
+    <testCase name="testSeedData seeding utility Seeds data into in-memory DB successfully" duration="31"/>
+    <testCase name="testSeedData seeding utility Rejects if insert fails (simulate error)" duration="7"/>
+  </file>
+  <file path="C:\Users\Admin\OneDrive\Desktop\FS2024\SWE4070A\bus-reservation-app\tests\searchBus.test.js">
+    <testCase name="Search and Seat Selection APIs Fetch available bus routes" duration="70"/>
+    <testCase name="Search and Seat Selection APIs Get available seats for route and date" duration="21"/>
+  </file>
+  <file path="C:\Users\Admin\OneDrive\Desktop\FS2024\SWE4070A\bus-reservation-app\tests\booking.test.js">
+    <testCase name="Booking Flow Register and login user before booking" duration="464"/>
+    <testCase name="Booking Flow Book seat successfully as logged-in user" duration="18"/>
+  </file>
+  <file path="C:\Users\Admin\OneDrive\Desktop\FS2024\SWE4070A\bus-reservation-app\tests\auth.test.js">
+    <testCase name="User Authentication API Register a new user successfully" duration="296"/>
+    <testCase name="User Authentication API Login with correct credentials" duration="183"/>
+    <testCase name="User Authentication API Login fails with wrong password" duration="161"/>
+  </file>
+</testExecutions>
