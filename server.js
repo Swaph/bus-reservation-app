@@ -2,9 +2,10 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require('fs');
 const path = require('path');
+const admin = require("firebase-admin");
 
 const app = express();
-const PORT = 3000;
+const PORT = 3001;
 
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
@@ -19,7 +20,11 @@ let reservations = JSON.parse(fs.readFileSync(reservationsPath, 'utf8'));
 app.get('/api/bus-routes', (req, res) => {
     res.json(busData.routes);
 });
-
+// Initialize Firebase Admin
+const serviceAccount = require("./firebase-service-account.json");
+admin.initializeApp({
+    credential: admin.credential.cert(serviceAccount)
+});
 // API to get available seats for a specific route and date
 app.get('/api/available-seats', (req, res) => {
     const { route, date } = req.query;
