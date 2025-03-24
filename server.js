@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require('fs');
 const path = require('path');
-const admin = require("firebase-admin");
+const authRoutes = require('./routes/auth');
 
 const app = express();
 const PORT = 3001;
@@ -16,15 +16,14 @@ const reservationsPath = path.join(__dirname, 'data', 'reservations.json');
 let busData = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
 let reservations = JSON.parse(fs.readFileSync(reservationsPath, 'utf8'));
 
+// Authentication routes
+app.use('/api/auth', authRoutes);
+
 // API to get bus routes
 app.get('/api/bus-routes', (req, res) => {
     res.json(busData.routes);
 });
-// Initialize Firebase Admin
-const serviceAccount = require("./firebase-service-account.json");
-admin.initializeApp({
-    credential: admin.credential.cert(serviceAccount)
-});
+
 // API to get available seats for a specific route and date
 app.get('/api/available-seats', (req, res) => {
     const { route, date } = req.query;
@@ -74,7 +73,6 @@ app.post('/api/reserve-seat', (req, res) => {
         res.status(400).send('Seats not available');
     }
 });
-
 
 // Serve the search results page
 app.get('/search-results', (req, res) => {
