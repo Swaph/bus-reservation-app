@@ -18,8 +18,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Install Jest
+        run: npm install jest --save-dev
+
       - name: Run Unit Tests
-        run: jest --passWithNoTests
+        run: npx jest --passWithNoTests
 
       - name: Generate Coverage Report
         run: npx jest --coverage --passWithNoTests
