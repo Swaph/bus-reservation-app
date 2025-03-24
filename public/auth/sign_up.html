@@ -5,105 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up - Bus Reservation</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
     <style>
-        body {
-            background-color: #fef6f9; /* Soft pinkish background */
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-        }
-        .signup-container {
-            max-width: 450px; /* Slim and focused */
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-        .card {
-            border: none;
+        .auth-container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         }
-        .card-header {
-            background-color: #d63f73; /* Pink theme for header */
-            color: #fff;
-            border-radius: 10px 10px 0 0;
-            padding: 15px;
+        .auth-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .auth-form input {
+            padding: 12px;
+            border: 2px solid #ff69b4;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .auth-form button {
+            padding: 12px;
+            background: #ff69b4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .auth-form button:hover {
+            background: #ff1493;
+        }
+        .auth-links {
+            margin-top: 15px;
             text-align: center;
         }
-        .btn-signup {
-            background-color: #d63f73; /* Pink button */
-            border: none;
-            padding: 10px;  
-            font-weight: 500;
-            transition: background-color 0.3s ease; /* Smooth hover */
-        }
-        .btn-signup:hover {
-            background-color: #b93363; /* Slightly darker pink for hover */
-            border-color: #b93363;
-        }
-        .form-control {
-            border-radius: 5px;
-            height: 45px; /* Taller inputs for usability */
-        }
-        .text-muted a {
-            color: #d63f73; /* Pink links */
+        .auth-links a {
+            color: #ff69b4;
             text-decoration: none;
         }
-        .text-sign-up {
-            color: #fff; 
-            text-decoration: none;
-        }
-        .text-muted a:hover {
-            color: #b93363; /* Darker pink on hover */
+        .auth-links a:hover {
             text-decoration: underline;
+        }
+        .error-message {
+            color: #ff1493;
+            text-align: center;
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="signup-container mt-5">
-        <div class="card">
-            <div class="card-header">
-                <h4 class="mb-0">Sign Up for Bus Reservation</h4>
-            </div>
-            <div class="card-body p-4">
-                <form id="signup-form">
-                    <div class="form-group">
-                        <label for="fullName">Full Name</label>
-                        <input type="text" class="form-control" id="fullName" placeholder="Enter your full name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password" placeholder="Create a password" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="confirmPassword">Confirm Password</label>
-                        <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your password" required>
-                    </div>
-                    <button type="submit" class="btn btn-signup btn-block text-sign-up">Sign Up</button>
-                </form>
-                <p class="text-center text-muted mt-3">
-                    Already have an account? <a href="#">Log in</a>
-                </p>
-            </div>
+    <div class="auth-container">
+        <h2 style="color: #ff69b4; text-align: center;">Sign Up</h2>
+        <div id="error-message" class="error-message"></div>
+        <form id="signup-form" class="auth-form">
+            <input type="text" id="name" placeholder="Full Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+        <div class="auth-links">
+            <p>Already have an account? <a href="login.html">Login</a></p>
+            <p><a href="index.html">Back to Home</a></p>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="firebase-config.js"></script>
     <script>
-        document.getElementById('signup-form').addEventListener('submit', function(e) {
+        document.getElementById('signup-form').addEventListener('submit', async (e) => {
             e.preventDefault();
-            let password = document.getElementById('password').value;
-            let confirmPassword = document.getElementById('confirmPassword').value;
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+            const errorMessage = document.getElementById('error-message');
+
             if (password !== confirmPassword) {
-                alert('Passwords do not match!');
-            } else {
-                alert('Sign-up successful! (This is a demo)');
-                // Add real sign-up logic here
+                errorMessage.textContent = "Passwords do not match!";
+                return;
+            }
+
+            try {
+                const userCredential = await firebase.auth().createUserWithEmailAndPassword(email, password);
+                await userCredential.user.updateProfile({
+                    displayName: name
+                });
+                window.location.href = 'index.html';
+            } catch (error) {
+                errorMessage.textContent = error.message;
             }
         });
     </script>
 </body>
-</html>
+</html> 

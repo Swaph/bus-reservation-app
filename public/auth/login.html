@@ -3,94 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log In - Bus Reservation</title>
+    <title>Login - Bus Reservation</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
     <style>
-        body {
-            background-color: #fef6f9; /* Soft pinkish background */
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-        }
-        .login-container {
-            max-width: 450px; /* Slim and focused */
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-        .card {
-            border: none;
+        .auth-container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         }
-        .card-header {
-            background-color: #d63f73; /* Pink theme for header */
-            color: #fff;
-            border-radius: 10px 10px 0 0;
-            padding: 15px;
+        .auth-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .auth-form input {
+            padding: 12px;
+            border: 2px solid #ff69b4;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .auth-form button {
+            padding: 12px;
+            background: #ff69b4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .auth-form button:hover {
+            background: #ff1493;
+        }
+        .auth-links {
+            margin-top: 15px;
             text-align: center;
         }
-        .btn-login {
-            background-color: #d63f73; /* Pink button */
-            border: none;
-            padding: 10px;
-            font-weight: 500;
-            transition: background-color 0.3s ease; /* Smooth hover */
-        }
-        .btn-login:hover {
-            background-color: #b93363; /* Darker pink for hover */
-            border-color: #b93363;
-        }
-        .form-control {
-            border-radius: 5px;
-            height: 45px; /* Taller inputs for usability */
-        }
-        .text-muted a {
-            color: #d63f73; /* Pink links */
+        .auth-links a {
+            color: #ff69b4;
             text-decoration: none;
         }
-        .text-muted a:hover {
-            color: #b93363; /* Darker pink on hover */
+        .auth-links a:hover {
             text-decoration: underline;
         }
-        .text-login {
-            color: #fff; /* White text for button */
-            text-decoration: none;
+        .error-message {
+            color: #ff1493;
+            text-align: center;
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="login-container mt-5">
-        <div class="card">
-            <div class="card-header">
-                <h4 class="mb-0">Log In to Bus Reservation</h4>
-            </div>
-            <div class="card-body p-4">
-                <form id="login-form">
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
-                    </div>
-                    <button type="submit" class="btn btn-login btn-block text-login">Log In</button>
-                </form>
-                <p class="text-center text-muted mt-3">
-                    Don’t have an account? <a href="#">Sign up</a>
-                </p>
-            </div>
+    <div class="auth-container">
+        <h2 style="color: #ff69b4; text-align: center;">Login</h2>
+        <div id="error-message" class="error-message"></div>
+        <form id="login-form" class="auth-form">
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+        <div class="auth-links">
+            <p>Don't have an account? <a href="sign_up.html">Sign up</a></p>
+            <p><a href="index.html">Back to Home</a></p>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="firebase-config.js"></script>
     <script>
-        document.getElementById('login-form').addEventListener('submit', function(e) {
+        document.getElementById('login-form').addEventListener('submit', async (e) => {
             e.preventDefault();
-            // Placeholder for login logic
-            alert('Login successful! (This is a demo)');
-            // Add real login logic here
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const errorMessage = document.getElementById('error-message');
+
+            try {
+                await firebase.auth().signInWithEmailAndPassword(email, password);
+                window.location.href = 'index.html';
+            } catch (error) {
+                errorMessage.textContent = error.message;
+            }
         });
     </script>
 </body>
-</html>
+</html> 
