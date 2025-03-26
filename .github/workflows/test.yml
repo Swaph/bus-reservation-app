@@ -16,12 +16,13 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
-        run: |
-          npm install
-          npm rebuild sqlite3 --build-from-source  # Ensure SQLite3 is built for the right environment
+        run: npm ci
+
+      - name: Fix Jest Permissions
+        run: chmod +x ./node_modules/.bin/jest  # Ensure Jest is executable
 
       - name: Run tests
-        run: npx jest
+        run: npx jest --runInBand  # Run tests in a single process
 
       - name: Generate Coverage Report
         run: npx jest --coverage
