@@ -1,5 +1,5 @@
 const sqlite3 = require('sqlite3').verbose();
-const db = require('C:/Users/hp/Desktop/bus-reservation-app-main/public/db.js'); // Ensure this path is correct
+const db = require('../../db.js');
 
 describe('Bus Reservation System - Database Tests', () => {
     beforeAll((done) => {
