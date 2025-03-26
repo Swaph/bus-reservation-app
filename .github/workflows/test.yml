@@ -21,7 +21,7 @@ jobs:
           npm rebuild sqlite3 --build-from-source  # Ensure SQLite3 is built for the right environment
 
       - name: Run tests
-        run: npm test
+        run: npx jest
 
       - name: Generate Coverage Report
         run: npx jest --coverage
