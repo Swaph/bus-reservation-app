@@ -93,3 +93,69 @@ Contributions are welcome! Please follow these steps:
 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Security Notes
+
+This project contains sensitive information that should not be committed to version control:
+- Firebase configuration
+- Environment variables
+- Service account keys
+- API keys
+
+## Setup Instructions
+
+1. Clone the repository
+```bash
+git clone <repository-url>
+cd bus-reservation-app
+```
+
+2. Install dependencies
+```bash
+npm install
+```
+
+3. Set up environment variables
+- Copy `.env.example` to `.env`
+- Fill in your Firebase configuration values in `.env`
+
+4. Start the development server
+```bash
+npm run dev
+```
+
+## Environment Variables
+
+Create a `.env` file in the root directory with the following variables:
+```
+PORT=3001
+NODE_ENV=development
+FIREBASE_API_KEY=your-api-key
+FIREBASE_AUTH_DOMAIN=your-project.firebaseapp.com
+FIREBASE_PROJECT_ID=your-project-id
+FIREBASE_STORAGE_BUCKET=your-project.appspot.com
+FIREBASE_MESSAGING_SENDER_ID=your-sender-id
+FIREBASE_APP_ID=your-app-id
+FIREBASE_MEASUREMENT_ID=your-measurement-id
+```
+
+## Security Best Practices
+
+1. Never commit sensitive files:
+   - `.env`
+   - `firebase-service-account.json`
+   - `node_modules/`
+   - Any files containing API keys or secrets
+
+2. Use environment variables for sensitive data
+3. Keep your Firebase service account key secure
+4. Regularly rotate API keys and secrets
+5. Use appropriate Firebase security rules
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a new Pull Request

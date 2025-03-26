@@ -70,38 +70,14 @@
         </form>
         <div class="auth-links">
             <p>Already have an account? <a href="login.html">Login</a></p>
-            <p><a href="index.html">Back to Home</a></p>
+            <p><a href="..\index.html">Back to Home</a></p>
         </div>
     </div>
 
     <!-- Firebase SDK -->
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
-    <script src="firebase-config.js"></script>
-    <script>
-        document.getElementById('signup-form').addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-            const confirmPassword = document.getElementById('confirm-password').value;
-            const errorMessage = document.getElementById('error-message');
-
-            if (password !== confirmPassword) {
-                errorMessage.textContent = "Passwords do not match!";
-                return;
-            }
-
-            try {
-                const userCredential = await firebase.auth().createUserWithEmailAndPassword(email, password);
-                await userCredential.user.updateProfile({
-                    displayName: name
-                });
-                window.location.href = 'index.html';
-            } catch (error) {
-                errorMessage.textContent = error.message;
-            }
-        });
-    </script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth-compat.js"></script>
+    <script src="/auth/firebase-config.js"></script>
+    <script src="/auth/sign_up.js"></script>
 </body>
 </html> 

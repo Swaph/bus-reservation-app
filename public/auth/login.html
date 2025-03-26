@@ -68,28 +68,14 @@
         </form>
         <div class="auth-links">
             <p>Don't have an account? <a href="sign_up.html">Sign up</a></p>
-            <p><a href="index.html">Back to Home</a></p>
+            <p><a href="..\index.html">Back to Home</a></p>
         </div>
     </div>
 
     <!-- Firebase SDK -->
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
-    <script src="firebase-config.js"></script>
-    <script>
-        document.getElementById('login-form').addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-            const errorMessage = document.getElementById('error-message');
-
-            try {
-                await firebase.auth().signInWithEmailAndPassword(email, password);
-                window.location.href = 'index.html';
-            } catch (error) {
-                errorMessage.textContent = error.message;
-            }
-        });
-    </script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth-compat.js"></script>
+    <script src="/auth/firebase-config.js"></script>
+    <script src="/auth/login.js"></script>
 </body>
 </html> 
