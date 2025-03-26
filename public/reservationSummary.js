@@ -1,38 +1,42 @@
+import fetchWithAuth from './js/main.js';
+
 document.addEventListener('DOMContentLoaded', () => {
-    // Check if the user has completed booking
-    const hasBooked = sessionStorage.getItem('hasBooked');
-    if (!hasBooked) {
-        alert('You must complete a booking before viewing the reservation summary.');
-        window.location.href = '/seatSelection.html'; // Redirect to seat selection
-        return;
-    }
+  // Check if the user has completed booking
+  const hasBooked = sessionStorage.getItem('hasBooked');
+  if (!hasBooked) {
+    alert('You must complete a booking before viewing the reservation summary.');
+    window.location.href = '/seatSelection.html'; // Redirect to seat selection
+    return;
+  }
 
-     // Retrieve reservation summary from session storage
-    const reservationSummary = JSON.parse(sessionStorage.getItem('reservationSummary'));
-    if (!reservationSummary) {
-        alert('Reservation summary not found. Please try again.');
-        return;
-    }
+  // Retrieve reservation summary from session storage
+  const reservationSummary = JSON.parse(sessionStorage.getItem('reservationSummary'));
+  if (!reservationSummary) {
+    alert('Reservation summary not found. Please try again.');
+    return;
+  }
 
-    const { route, date, busName, departureTime, arrivalTime, busType, fare, numberPlate, seats, passengerInfo } = reservationSummary;
+  const {
+    route, date, busName, departureTime, arrivalTime, busType, fare, numberPlate, seats, passengerInfo,
+  } = reservationSummary;
 
-    // Ensure fare is a number
-    const parsedFare = parseFloat(fare);
-    if (isNaN(parsedFare)) {
-        console.error('Invalid fare value:', fare);
-        alert('Invalid fare value. Please try again.');
-        return;
-    }
+  // Ensure fare is a number
+  const parsedFare = parseFloat(fare);
+  if (isNaN(parsedFare)) {
+    console.error('Invalid fare value:', fare);
+    alert('Invalid fare value. Please try again.');
+    return;
+  }
 
-    // Display passenger details
-    const passengerDetails = document.getElementById('passenger-details');
-    if (!passengerDetails) {
-        console.error('Required DOM element not found: passenger-details');
-        alert('Required DOM element not found. Please reload the page.');
-        return;
-    }
+  // Display passenger details
+  const passengerDetails = document.getElementById('passenger-details');
+  if (!passengerDetails) {
+    console.error('Required DOM element not found: passenger-details');
+    alert('Required DOM element not found. Please reload the page.');
+    return;
+  }
 
-    passengerDetails.innerHTML = Object.entries(passengerInfo).map(([seatNumber, passenger]) => `
+  passengerDetails.innerHTML = Object.entries(passengerInfo).map(([seatNumber, passenger]) => `
         <tr>
             <td>${passenger.firstName}</td>
             <td>${passenger.lastName}</td>
@@ -41,19 +45,18 @@ document.addEventListener('DOMContentLoaded', () => {
         </tr>
     `).join('');
 
-    // Display booking details
-    const bookingDetails = document.getElementById('booking-details');
-    if (!bookingDetails) {
-        console.error('Required DOM element not found: booking-details');
-        alert('Required DOM element not found. Please reload the page.');
-        return;
-    }
+  // Display booking details
+  const bookingDetails = document.getElementById('booking-details');
+  if (!bookingDetails) {
+    console.error('Required DOM element not found: booking-details');
+    alert('Required DOM element not found. Please reload the page.');
+    return;
+  }
 
-    const busImage = busType.toLowerCase().replace(' ', '_') === 'ac_coach' ? 'ac_coach.png' :
-                     busType.toLowerCase().replace(' ', '_') === 'bolt_bus' ? 'bolt_bus.png' : 'mega_bus.png';
-    let routeInfo = `${route.split('-').join(' to ')}, ${departureTime} to ${arrivalTime}`;
+  const busImage = getBusImage(busType);
+  const routeInfo = `${route.split('-').join(' to ')}, ${departureTime} to ${arrivalTime}`;
 
-    bookingDetails.innerHTML = `
+  bookingDetails.innerHTML = `
         <tr>
             <td><img src="images/${busImage}" alt="${busType}" class="bus-image"></td>
             <td>${numberPlate}</td>
@@ -65,19 +68,19 @@ document.addEventListener('DOMContentLoaded', () => {
         </tr>
     `;
 
-    // Display payment details
-    const paymentDetails = document.getElementById('payment-details');
-    if (!paymentDetails) {
-        console.error('Required DOM element not found: payment-details');
-        alert('Required DOM element not found. Please reload the page.');
-        return;
-    }
+  // Display payment details
+  const paymentDetails = document.getElementById('payment-details');
+  if (!paymentDetails) {
+    console.error('Required DOM element not found: payment-details');
+    alert('Required DOM element not found. Please reload the page.');
+    return;
+  }
 
-    let totalPrice = 0;
-    const paymentRows = Object.entries(passengerInfo).map(([seatNumber, passenger]) => {
-        const seatFare = parsedFare;
-        totalPrice += seatFare;
-        return `
+  let totalPrice = 0;
+  const paymentRows = Object.entries(passengerInfo).map(([seatNumber, passenger]) => {
+    const seatFare = parsedFare;
+    totalPrice += seatFare;
+    return `
             <tr>
                 <td>${passenger.seatType || 'Adult'}</td>
                 <td>${seatNumber}</td>
@@ -86,107 +89,162 @@ document.addEventListener('DOMContentLoaded', () => {
                 <td>Ksh ${seatFare.toFixed(2)}</td>
             </tr>
         `;
-    }).join('');
+  }).join('');
 
-    paymentDetails.innerHTML = paymentRows;
+  paymentDetails.innerHTML = paymentRows;
 
-    // Update ticket subtotal
-    const ticketSubtotal = document.getElementById('ticket-subtotal');
-    if (!ticketSubtotal) {
-        console.error('Required DOM element not found: ticket-subtotal');
-        alert('Required DOM element not found. Please reload the page.');
-        return;
-    }
+  // Update ticket subtotal
+  const ticketSubtotal = document.getElementById('ticket-subtotal');
+  if (!ticketSubtotal) {
+    console.error('Required DOM element not found: ticket-subtotal');
+    alert('Required DOM element not found. Please reload the page.');
+    return;
+  }
 
-    ticketSubtotal.textContent = `Ksh ${totalPrice.toFixed(2)}`;
+  ticketSubtotal.textContent = `Ksh ${totalPrice.toFixed(2)}`;
+
+  displayReservationDetails();
+  const paymentStatus = getPaymentStatus();
+  document.getElementById('paymentStatus').textContent = paymentStatus;
 });
 
 function goBack() {
-    window.history.back();
+  window.history.back();
 }
 
 function proceedBooking() {
-    const proceedButton = document.querySelector('.btn-primary');
-    proceedButton.disabled = true;
-    proceedButton.textContent = 'Booking...';
+  const proceedButton = document.querySelector('.btn-primary');
+  proceedButton.disabled = true;
+  proceedButton.textContent = 'Booking...';
 
-    // Simulate booking process
-    setTimeout(() => {
-        proceedButton.textContent = 'Proceed';
-        proceedButton.disabled = false;
-        if (confirm('Booking successful! Do you want to download the reservation summary?')) {
-            generatePDF();
-        }
-    }, 2000);
+  // Simulate booking process
+  setTimeout(() => {
+    proceedButton.textContent = 'Proceed';
+    proceedButton.disabled = false;
+    if (confirm('Booking successful! Do you want to download the reservation summary?')) {
+      generatePDF();
+    }
+  }, 2000);
 }
 
 function generatePDF() {
-    const { jsPDF } = window.jspdf;
-    const doc = new jsPDF();
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF();
 
-    const reservationSummary = JSON.parse(sessionStorage.getItem('reservationSummary'));
-    const { route, date, busName, departureTime, arrivalTime, busType, fare, numberPlate, seats, passengerInfo } = reservationSummary;
+  const reservationSummary = JSON.parse(sessionStorage.getItem('reservationSummary'));
+  const {
+    route, date, busName, departureTime, arrivalTime, busType, fare, numberPlate, seats, passengerInfo,
+  } = reservationSummary;
 
-    // Ensure fare is a number
-    const parsedFare = parseFloat(fare);
-    if (isNaN(parsedFare)) {
-        console.error('Invalid fare value:', fare);
-        alert('Invalid fare value. Please try again.');
-        return;
-    }
+  // Ensure fare is a number
+  const parsedFare = parseFloat(fare);
+  if (isNaN(parsedFare)) {
+    console.error('Invalid fare value:', fare);
+    alert('Invalid fare value. Please try again.');
+    return;
+  }
 
-    // Generate a unique reservation number
-    const summaryNumber = `RSV-${Math.floor(Math.random() * 1000000)}`;
+  // Generate a unique reservation number
+  const summaryNumber = `RSV-${Math.floor(Math.random() * 1000000)}`;
 
-    // Company name and Reservation number
-    doc.setFontSize(20);
-    doc.text('Pinque Bus Lines', 10, 10);
-    doc.setFontSize(12);
-    doc.text(`Reservation Number: ${summaryNumber}`, 10, 20);
+  // Company name and Reservation number
+  doc.setFontSize(20);
+  doc.text('Pinque Bus Lines', 10, 10);
+  doc.setFontSize(12);
+  doc.text(`Reservation Number: ${summaryNumber}`, 10, 20);
 
-    // Add passenger details
-    doc.setFontSize(12);
-    doc.text('Passenger Details', 10, 30);
-    let yOffset = 40;
-    Object.entries(passengerInfo).forEach(([seatNumber, passenger]) => {
-        doc.text(`First Name: ${passenger.firstName}`, 10, yOffset);
-        doc.text(`Last Name: ${passenger.lastName}`, 10, yOffset + 5);
-        doc.text(`National ID: ${passenger.nationalID}`, 10, yOffset + 10);
-        doc.text(`Phone: ${passenger.phone}`, 10, yOffset + 15);
-        yOffset += 20;
+  // Add passenger details
+  doc.setFontSize(12);
+  doc.text('Passenger Details', 10, 30);
+  let yOffset = 40;
+  Object.entries(passengerInfo).forEach(([seatNumber, passenger]) => {
+    doc.text(`First Name: ${passenger.firstName}`, 10, yOffset);
+    doc.text(`Last Name: ${passenger.lastName}`, 10, yOffset + 5);
+    doc.text(`National ID: ${passenger.nationalID}`, 10, yOffset + 10);
+    doc.text(`Phone: ${passenger.phone}`, 10, yOffset + 15);
+    yOffset += 20;
+  });
+
+  // Add booking details
+  doc.setFontSize(12);
+  doc.text('Booking Details', 10, yOffset);
+  yOffset += 10;
+  doc.text(`Bus Name: ${busName}`, 10, yOffset);
+  doc.text(`Number Plate: ${numberPlate}`, 10, yOffset + 5);
+  doc.text(`Route: ${route.split('-').join(' to ')}`, 10, yOffset + 10);
+  doc.text(`Time and Travel Date: ${date}`, 10, yOffset + 15);
+  doc.text(`Bus Type: ${busType}`, 10, yOffset + 20);
+  doc.text(`Booking Date: ${new Date().toLocaleDateString()}`, 10, yOffset + 25);
+
+  // Add payment details
+  doc.setFontSize(12);
+  doc.text('Payment Details', 10, yOffset + 35);
+  yOffset += 45;
+  let totalPrice = 0;
+  Object.entries(passengerInfo).forEach(([seatNumber, passenger]) => {
+    const seatFare = parsedFare;
+    totalPrice += seatFare;
+    doc.text(`Seat Type: ${passenger.seatType || 'Adult'}`, 10, yOffset);
+    doc.text(`Seat Number: ${seatNumber}`, 10, yOffset + 5);
+    doc.text(`Price: Ksh ${seatFare.toFixed(2)}`, 10, yOffset + 10);
+    doc.text('Quantity: 1', 10, yOffset + 15);
+    doc.text(`Total: Ksh ${seatFare.toFixed(2)}`, 10, yOffset + 20);
+    yOffset += 25;
+  });
+
+  // Add ticket subtotal
+  doc.setFontSize(12);
+  doc.text(`Ticket Subtotal: Ksh ${totalPrice.toFixed(2)}`, 10, yOffset + 30);
+
+  // Save the PDF
+  doc.save('reservation_summary.pdf');
+}
+
+function displayReservationDetails() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const reservationId = urlParams.get('id');
+  
+  if (!reservationId) {
+    window.location.href = '/index.html';
+    return;
+  }
+
+  // Fetch reservation details
+  fetchWithAuth(`/api/reservations/${reservationId}`)
+    .then(response => response.json())
+    .then(reservation => {
+      const { date, busName, seats, departureTime, arrivalTime } = reservation;
+      
+      // Update DOM with reservation details
+      document.getElementById('reservationId').textContent = reservationId;
+      document.getElementById('date').textContent = new Date(date).toLocaleDateString();
+      document.getElementById('busName').textContent = busName;
+      document.getElementById('seats').textContent = seats.join(', ');
+      document.getElementById('departureTime').textContent = formatTime(departureTime);
+      document.getElementById('arrivalTime').textContent = formatTime(arrivalTime);
+      document.getElementById('paymentStatus').textContent = getPaymentStatus();
+    })
+    .catch(error => {
+      console.error('Error fetching reservation:', error);
+      alert('Failed to load reservation details. Please try again.');
     });
+}
 
-    // Add booking details
-    doc.setFontSize(12);
-    doc.text('Booking Details', 10, yOffset);
-    yOffset += 10;
-    doc.text(`Bus Name: ${busName}`, 10, yOffset);
-    doc.text(`Number Plate: ${numberPlate}`, 10, yOffset + 5);
-    doc.text(`Route: ${route.split('-').join(' to ')}`, 10, yOffset + 10);
-    doc.text(`Time and Travel Date: ${date}`, 10, yOffset + 15);
-    doc.text(`Bus Type: ${busType}`, 10, yOffset + 20);
-    doc.text(`Booking Date: ${new Date().toLocaleDateString()}`, 10, yOffset + 25);
+function getPaymentStatus() {
+  return Math.random() > 0.5 ? 'Payment Successful' : 'Payment Pending';
+}
 
-    // Add payment details
-    doc.setFontSize(12);
-    doc.text('Payment Details', 10, yOffset + 35);
-    yOffset += 45;
-    let totalPrice = 0;
-    Object.entries(passengerInfo).forEach(([seatNumber, passenger]) => {
-        const seatFare = parsedFare;
-        totalPrice += seatFare;
-        doc.text(`Seat Type: ${passenger.seatType || 'Adult'}`, 10, yOffset);
-        doc.text(`Seat Number: ${seatNumber}`, 10, yOffset + 5);
-        doc.text(`Price: Ksh ${seatFare.toFixed(2)}`, 10, yOffset + 10);
-        doc.text(`Quantity: 1`, 10, yOffset + 15);
-        doc.text(`Total: Ksh ${seatFare.toFixed(2)}`, 10, yOffset + 20);
-        yOffset += 25;
-    });
+function formatTime(time) {
+  const [hours, minutes] = time.split(':');
+  const hour = parseInt(hours, 10);
+  const period = hour > 12 ? 'PM' : 'AM';
+  const displayHour = hour > 12 ? hour - 12 : hour;
+  return `${displayHour}:${minutes} ${period}`;
+}
 
-    // Add ticket subtotal
-    doc.setFontSize(12);
-    doc.text(`Ticket Subtotal: Ksh ${totalPrice.toFixed(2)}`, 10, yOffset + 30);
-
-    // Save the PDF
-    doc.save('reservation_summary.pdf');
+function getBusImage(busType) {
+  const type = busType.toLowerCase().replace(' ', '_');
+  if (type === 'ac_coach') return 'ac_coach.png';
+  if (type === 'bolt_bus') return 'bolt_bus.png';
+  return 'mega_bus.png';
 }
