@@ -1,5 +1,5 @@
 const sqlite3 = require('sqlite3').verbose();
-const db = require('C:/Users/hp/Desktop/bus-reservation-app-main/public/db.js'); // Corrected relative path to db.js
+const db = require('C:/Users/hp/Desktop/bus-reservation-app-main/public/db.js'); // Ensure this path is correct
 
 describe('Bus Reservation System - Database Tests', () => {
     beforeAll((done) => {
@@ -23,6 +23,7 @@ describe('Bus Reservation System - Database Tests', () => {
     test('Should create and fetch a user', (done) => {
         db.run(`INSERT INTO users (username, password) VALUES (?, ?)`, ['testUser', 'password123'], function (err) {
             expect(err).toBeNull();
+
             db.get(`SELECT * FROM users WHERE username = ?`, ['testUser'], (err, row) => {
                 expect(err).toBeNull();
                 expect(row).toBeDefined();
@@ -33,3 +34,4 @@ describe('Bus Reservation System - Database Tests', () => {
         });
     });
 });
+
