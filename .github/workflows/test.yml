@@ -30,7 +30,7 @@ jobs:
         run: sudo apt-get install -y sqlite3
 
       - name: Run tests
-        run: npm test
+        run: npx jest
 
       - name: Generate Coverage Report
         run: npx jest --coverage
