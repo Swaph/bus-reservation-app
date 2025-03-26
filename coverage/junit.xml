@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="6" failures="0" errors="0" time="6.529">
-  <testsuite name="Authentication Tests" errors="0" failures="0" skipped="0" timestamp="2025-03-26T14:08:17" time="6.229" tests="6">
-    <testcase classname="Authentication Tests Sign Up Tests" name="should create a new user with valid credentials" time="1.329">
+<testsuites name="jest tests" tests="6" failures="0" errors="0" time="0.816">
+  <testsuite name="Authentication Tests" errors="0" failures="0" skipped="0" timestamp="2025-03-26T14:16:55" time="0.707" tests="6">
+    <testcase classname="Authentication Tests Sign Up Tests" name="should create a new user with valid credentials" time="0.004">
     </testcase>
-    <testcase classname="Authentication Tests Sign Up Tests" name="should not create a user with invalid email" time="0.046">
+    <testcase classname="Authentication Tests Sign Up Tests" name="should not create a user with invalid email" time="0.011">
     </testcase>
-    <testcase classname="Authentication Tests Sign Up Tests" name="should not create a user with weak password" time="0.004">
+    <testcase classname="Authentication Tests Sign Up Tests" name="should not create a user with weak password" time="0.001">
     </testcase>
-    <testcase classname="Authentication Tests Login Tests" name="should verify valid user credentials" time="0.352">
+    <testcase classname="Authentication Tests Login Tests" name="should verify valid user credentials" time="0.001">
     </testcase>
-    <testcase classname="Authentication Tests Login Tests" name="should not verify invalid email" time="0.381">
+    <testcase classname="Authentication Tests Login Tests" name="should not verify invalid email" time="0.001">
     </testcase>
-    <testcase classname="Authentication Tests Login Tests" name="should verify user exists but with wrong password" time="0.302">
+    <testcase classname="Authentication Tests Login Tests" name="should verify user exists but with wrong password" time="0.001">
     </testcase>
   </testsuite>
 </testsuites>
