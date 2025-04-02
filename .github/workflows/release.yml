@@ -28,7 +28,7 @@ jobs:
           echo "## Known Issues:" >> release-notes.md
           echo "" >> release-notes.md
           echo "## Download Links:" >> release-notes.md
-          echo "- **[Source Code](https://github.com/Swaph/bus-reservation-app/releases/download/${{ github.ref_name }}/bus-reservation-${{ github.ref_name }}.tar.gz)**" >> release-notes.md
+          echo "- **[Source Code](https://github.com/Swaph/bus-reservation-app/archive/refs/tags/${{ github.ref_name }}.zip)**" >> release-notes.md
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
