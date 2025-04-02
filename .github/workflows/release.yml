@@ -13,31 +13,25 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build project
-        run: npm run build
-
-      - name: Package artifacts
-        run: tar -czvf bus-reservation-${{ github.ref_name }}.tar.gz ./dist
-
       - name: Generate Release Notes
         run: |
-          echo "## Release Notes" > release-notes.md
-          echo "**Version:** ${{ github.ref_name }}" >> release-notes.md
+          echo "# Release Notes" > release-notes.md
           echo "**Release Date:** $(date +'%Y-%m-%d')" >> release-notes.md
-          echo "**Changes:**" >> release-notes.md
-          git log --pretty=format:"- %s" $(git describe --tags --abbrev=0)..HEAD >> release-notes.md
+          echo "" >> release-notes.md
+          echo "## New Features:" >> release-notes.md
+
+          echo "" >> release-notes.md
+          echo "## Bug Fixes:" >> release-notes.md
+
+          echo "" >> release-notes.md
+          echo "## Known Issues:" >> release-notes.md
+
+          echo "" >> release-notes.md
+          echo "## Download Links:" >> release-notes.md
+          echo "- **[Source Code](https://github.com/Swaph/bus-reservation-app/releases/download/${{ github.ref_name }}/bus-reservation-${{ github.ref_name }}.tar.gz)**" >> release-notes.md
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
         with:
-          files: "bus-reservation-${{ github.ref_name }}.tar.gz"
           body_path: release-notes.md
-          generate_release_notes: true  # Enables auto-generated GitHub release notes
+          generate_release_notes: false  # Disable auto-generated notes, as we're generating custom ones
