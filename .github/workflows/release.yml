@@ -5,6 +5,9 @@ on:
     tags:
       - "v*.*.*"  # Triggers workflow on version tags like v1.0.0
 
+permissions:
+  contents: write  # Allows GitHub Actions to create releases
+
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -19,13 +22,10 @@ jobs:
           echo "**Release Date:** $(date +'%Y-%m-%d')" >> release-notes.md
           echo "" >> release-notes.md
           echo "## New Features:" >> release-notes.md
-
           echo "" >> release-notes.md
           echo "## Bug Fixes:" >> release-notes.md
-
           echo "" >> release-notes.md
           echo "## Known Issues:" >> release-notes.md
-
           echo "" >> release-notes.md
           echo "## Download Links:" >> release-notes.md
           echo "- **[Source Code](https://github.com/Swaph/bus-reservation-app/releases/download/${{ github.ref_name }}/bus-reservation-${{ github.ref_name }}.tar.gz)**" >> release-notes.md
@@ -34,4 +34,4 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           body_path: release-notes.md
-          generate_release_notes: false  # Disable auto-generated notes, as we're generating custom ones
+          generate_release_notes: false
