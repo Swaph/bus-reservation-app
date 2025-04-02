@@ -1,0 +1,43 @@
+name: Release Automation
+
+on:
+  push:
+    tags:
+      - "v*.*.*"  # Triggers workflow on version tags like v1.0.0
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build
+
+      - name: Package artifacts
+        run: tar -czvf bus-reservation-${{ github.ref_name }}.tar.gz ./dist
+
+      - name: Generate Release Notes
+        run: |
+          echo "## Release Notes" > release-notes.md
+          echo "**Version:** ${{ github.ref_name }}" >> release-notes.md
+          echo "**Release Date:** $(date +'%Y-%m-%d')" >> release-notes.md
+          echo "**Changes:**" >> release-notes.md
+          git log --pretty=format:"- %s" $(git describe --tags --abbrev=0)..HEAD >> release-notes.md
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: "bus-reservation-${{ github.ref_name }}.tar.gz"
+          body_path: release-notes.md
+          generate_release_notes: true  # Enables auto-generated GitHub release notes
